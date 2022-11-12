@@ -136,7 +136,7 @@ const links = [
   },
 ];
 
-function IndexPage() {
+const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
@@ -178,10 +178,10 @@ function IndexPage() {
       </ul>
     </main>
   );
-}
+};
 
 export default IndexPage;
 
-export function Head() {
+export const Head = () => {
   return <title>Home Page</title>;
-}
+};

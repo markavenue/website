@@ -35,7 +35,7 @@ const commonPresets = [
 
 module.exports = {
   ...baseConfig,
-  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs'],
+  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs', 'prefer-arrow'],
   extends: commonPresets,
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
@@ -58,6 +58,16 @@ module.exports = {
       ],
       parserOptions: {
         project: './tsconfig.json',
+      },
+      rules: {
+        'prefer-arrow/prefer-arrow-functions': 'error',
+        'react/function-component-definition': [
+          'error',
+          {
+            namedComponents: 'arrow-function',
+            unnamedComponents: 'arrow-function',
+          },
+        ],
       },
     },
   ],

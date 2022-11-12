@@ -23,7 +23,7 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-function NotFoundPage() {
+const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
@@ -42,10 +42,10 @@ function NotFoundPage() {
       </p>
     </main>
   );
-}
+};
 
 export default NotFoundPage;
 
-export function Head() {
+export const Head = () => {
   return <title>Not found</title>;
-}
+};
