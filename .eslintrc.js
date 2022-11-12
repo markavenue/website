@@ -69,6 +69,8 @@ module.exports = {
           },
         ],
         'arrow-body-style': 'error',
+        'react/require-default-props': 'off',
+        'react/prop-types': 'off',
       },
     },
   ],
