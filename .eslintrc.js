@@ -68,6 +68,7 @@ module.exports = {
             unnamedComponents: 'arrow-function',
           },
         ],
+        'arrow-body-style': 'error',
       },
     },
   ],

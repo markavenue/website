@@ -136,52 +136,48 @@ const links = [
   },
 ];
 
-const IndexPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.tsx</code>
-        to see this page update in real-time. 😎
-      </p>
-      <ul style={doclistStyles}>
-        {docLinks.map((doc) => (
-          <li key={doc.url} style={docLinkStyle}>
-            <a style={linkStyle} href={doc.url}>
-              {doc.text}
+const IndexPage = () => (
+  <main style={pageStyles}>
+    <h1 style={headingStyles}>
+      Congratulations
+      <br />
+      <span style={headingAccentStyles}>
+        — you just made a Gatsby site! 🎉🎉🎉
+      </span>
+    </h1>
+    <p style={paragraphStyles}>
+      Edit <code style={codeStyles}>src/pages/index.tsx</code>
+      to see this page update in real-time. 😎
+    </p>
+    <ul style={doclistStyles}>
+      {docLinks.map((doc) => (
+        <li key={doc.url} style={docLinkStyle}>
+          <a style={linkStyle} href={doc.url}>
+            {doc.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+    <ul style={listStyles}>
+      {links.map((link) => (
+        <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+          <span>
+            <a style={linkStyle} href={link.url}>
+              {link.text}
             </a>
-          </li>
-        ))}
-      </ul>
-      <ul style={listStyles}>
-        {links.map((link) => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a style={linkStyle} href={link.url}>
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-    </main>
-  );
-};
+            {link.badge && (
+              <span style={badgeStyle} aria-label="New Badge">
+                NEW!
+              </span>
+            )}
+            <p style={descriptionStyle}>{link.description}</p>
+          </span>
+        </li>
+      ))}
+    </ul>
+  </main>
+);
 
 export default IndexPage;
 
-export const Head = () => {
-  return <title>Home Page</title>;
-};
+export const Head = () => <title>Home Page</title>;
