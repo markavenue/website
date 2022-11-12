@@ -8,18 +8,20 @@ const rulesDirPlugin = require('eslint-plugin-rulesdir');
 
 const { baseConfig } = eslintConfig(false);
 
-rulesDirPlugin.RULES_DIR = path.resolve(path.join(
-  __dirname,
-  'node_modules',
-  'gatsby',
-  'dist',
-  'utils',
-  'eslint-rules',
-));
+rulesDirPlugin.RULES_DIR = path.resolve(
+  path.join(
+    __dirname,
+    'node_modules',
+    'gatsby',
+    'dist',
+    'utils',
+    'eslint-rules',
+  ),
+);
 
-const presetIndex = baseConfig.extends.indexOf(require.resolve(
-  'gatsby/dist/utils/eslint/required',
-));
+const presetIndex = baseConfig.extends.indexOf(
+  require.resolve('gatsby/dist/utils/eslint/required'),
+);
 
 const commonPresets = [
   // Local rules have to be prefixed with `rulesdir/`. Let's remove the preset
@@ -28,24 +30,21 @@ const commonPresets = [
   'airbnb',
   'airbnb/hooks',
   'plugin:sonarjs/recommended',
+  'plugin:prettier/recommended',
 ];
 
 module.exports = {
   ...baseConfig,
-  plugins: [
-    ...baseConfig.plugins,
-    'rulesdir',
-    'sonarjs',
-  ],
+  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs'],
   extends: commonPresets,
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
   parser: undefined,
   rules: {
     ...baseConfig.rules,
-    ...Object.fromEntries(Object.keys(rules).map(
-      (key) => [`rulesdir/${key}`, rules[key]],
-    )),
+    ...Object.fromEntries(
+      Object.keys(rules).map((key) => [`rulesdir/${key}`, rules[key]]),
+    ),
     'max-len': ['error', 80, { ignoreUrls: true }],
   },
   overrides: [

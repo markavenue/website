@@ -147,20 +147,13 @@ function IndexPage() {
         </span>
       </h1>
       <p style={paragraphStyles}>
-        Edit
-        {' '}
-        <code style={codeStyles}>src/pages/index.tsx</code>
-        {' '}
-        to see this page
-        update in real-time. 😎
+        Edit <code style={codeStyles}>src/pages/index.tsx</code>
+        to see this page update in real-time. 😎
       </p>
       <ul style={doclistStyles}>
         {docLinks.map((doc) => (
           <li key={doc.url} style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={doc.url}
-            >
+            <a style={linkStyle} href={doc.url}>
               {doc.text}
             </a>
           </li>
@@ -170,10 +163,7 @@ function IndexPage() {
         {links.map((link) => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
-              <a
-                style={linkStyle}
-                href={link.url}
-              >
+              <a style={linkStyle} href={link.url}>
                 {link.text}
               </a>
               {link.badge && (
