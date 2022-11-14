@@ -16,7 +16,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "gatsby": "^4.24.7",
+    "gatsby": "^4.24.8",
     "gatsby-plugin-postcss": "^5.24.0",
     "postcss": "^8.4.18",
     "react": "^18.1.0",
