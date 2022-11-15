@@ -33,6 +33,25 @@ const commonPresets = [
   'plugin:prettier/recommended',
 ];
 
+const commonRules = {
+  ...baseConfig.rules,
+  ...Object.fromEntries(
+    Object.keys(rules).map((key) => [`rulesdir/${key}`, rules[key]]),
+  ),
+  'max-len': ['error', 80, { ignoreUrls: true }],
+  'arrow-body-style': 'error',
+  'prefer-arrow/prefer-arrow-functions': 'error',
+  'react/require-default-props': 'off',
+  'react/prop-types': 'off',
+  'react/function-component-definition': [
+    'error',
+    {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    },
+  ],
+};
+
 module.exports = {
   ...baseConfig,
   plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs', 'prefer-arrow'],
@@ -41,11 +60,7 @@ module.exports = {
   // are in TypeScript anyway.
   parser: undefined,
   rules: {
-    ...baseConfig.rules,
-    ...Object.fromEntries(
-      Object.keys(rules).map((key) => [`rulesdir/${key}`, rules[key]]),
-    ),
-    'max-len': ['error', 80, { ignoreUrls: true }],
+    ...commonRules,
   },
   overrides: [
     {
@@ -60,17 +75,7 @@ module.exports = {
         project: './tsconfig.json',
       },
       rules: {
-        'prefer-arrow/prefer-arrow-functions': 'error',
-        'react/function-component-definition': [
-          'error',
-          {
-            namedComponents: 'arrow-function',
-            unnamedComponents: 'arrow-function',
-          },
-        ],
-        'arrow-body-style': 'error',
-        'react/require-default-props': 'off',
-        'react/prop-types': 'off',
+        ...commonRules,
       },
     },
   ],
