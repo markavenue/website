@@ -30,6 +30,14 @@ const commonPresets = [
   'plugin:sonarjs/recommended',
 ];
 
+const commonRules = {
+  ...baseConfig.rules,
+  ...Object.fromEntries(Object.keys(rules).map(
+    (key) => [`rulesdir/${key}`, rules[key]],
+  )),
+  'max-len': ['error', 80, { ignoreUrls: true }],
+};
+
 module.exports = {
   ...baseConfig,
   plugins: [
@@ -42,11 +50,7 @@ module.exports = {
   // are in TypeScript anyway.
   parser: undefined,
   rules: {
-    ...baseConfig.rules,
-    ...Object.fromEntries(Object.keys(rules).map(
-      (key) => [`rulesdir/${key}`, rules[key]],
-    )),
-    'max-len': ['error', 80, { ignoreUrls: true }],
+    ...commonRules,
   },
   overrides: [
     {
@@ -59,6 +63,9 @@ module.exports = {
       ],
       parserOptions: {
         project: './tsconfig.json',
+      },
+      rules: {
+        ...commonRules,
       },
     },
   ],
