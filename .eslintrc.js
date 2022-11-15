@@ -41,8 +41,6 @@ const commonRules = {
   'max-len': ['error', 80, { ignoreUrls: true }],
   'arrow-body-style': 'error',
   'prefer-arrow/prefer-arrow-functions': 'error',
-  'react/require-default-props': 'off',
-  'react/prop-types': 'off',
   'react/function-component-definition': [
     'error',
     {
@@ -76,6 +74,8 @@ module.exports = {
       },
       rules: {
         ...commonRules,
+        'react/require-default-props': 'off',
+        'react/prop-types': 'off',
       },
     },
   ],
