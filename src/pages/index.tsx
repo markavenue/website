@@ -3,11 +3,17 @@ import Hero from '../components/ui/hero/Hero';
 import PageTitle from '../components/page-title/PageTitle';
 import Section from '../components/ui/section/Section';
 
+import ApartmeaIcon from '../assets/apartmea-icon.svg';
+import FrangoIcon from '../assets/frango-icon.svg';
+import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
+import SoupCultureIcon from '../assets/soup-culture-icon.svg';
+
 function IndexPage() {
   return (
     <main>
       <Section>
         <Hero
+          icon={<SoupCultureIcon />}
           headline="Soupculture"
           description="Soupculture je bezodpadový street food zameraný na
             polievky v chrumkavých pohároch. Firma potrebovala odštartovať
@@ -18,6 +24,7 @@ function IndexPage() {
         />
         <Hero
           rtl
+          icon={<FrangoIcon />}
           headline="Frango"
           description="Frango je slovenská sieť reštaurácií rýchleho
             občerstvenia, ktorá sa špecializuje na chutné a šťavnaté jedlá z
@@ -26,6 +33,7 @@ function IndexPage() {
             vo foodcourte na Nivách."
         />
         <Hero
+          icon={<SoupCultureIcon />}
           headline="Hate-free Zone"
           description="Islamská nadácia na Slovensku už viac ako 23 rokov buduje
             mosty porozumenia. Prepája a zbližuje cudzinecké a moslimské
@@ -35,6 +43,7 @@ function IndexPage() {
         />
         <Hero
           rtl
+          icon={<ApartmeaIcon />}
           headline="Apartmea"
           description="Apartmea je spoločnosť, ktorá zjednodušuje zákaznícku
             cestu k rezervácii apartmánov. Našou úlohou bolo vytvoriť funkčnú

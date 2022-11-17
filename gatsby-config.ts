@@ -36,6 +36,14 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-postcss',
     'gatsby-plugin-dts-css-modules',
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        }
+      }
+    }
   ],
 };
 
