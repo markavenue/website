@@ -1,4 +1,5 @@
 import * as React from 'react';
+import PageTitle from '../components/page-title/PageTitle';
 
 const pageStyles = {
   color: '#232129',
@@ -193,5 +194,5 @@ function IndexPage() {
 export default IndexPage;
 
 export function Head() {
-  return <title>Home Page</title>;
+  return <PageTitle />;
 }
