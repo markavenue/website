@@ -18,6 +18,7 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-postcss',
+    'gatsby-plugin-dts-css-modules',
   ],
 };
 
