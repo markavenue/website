@@ -1,0 +1,19 @@
+.hero {
+  display: flex;
+}
+
+.rtl {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 2;
+}

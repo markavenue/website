@@ -29,8 +29,8 @@ const config: GatsbyConfig = {
           },
           {
             name: 'Anton',
-            file: 'https://fonts.googleapis.com/css2?family=Anton&display=swap'
-          }
+            file: 'https://fonts.googleapis.com/css2?family=Anton&display=swap',
+          },
         ],
       },
     },
