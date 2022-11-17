@@ -22,6 +22,8 @@ function IndexPage() {
             spolupracovali aj s mikroinfluencermi pre ešte efektívnejšie šírenie
             povedomia."
         />
+      </Section>
+      <Section>
         <Hero
           rtl
           icon={<FrangoIcon />}
@@ -32,8 +34,10 @@ function IndexPage() {
             originálnu vizuálnu identitu, ktorou táto sieť púta pozornosť ľudí
             vo foodcourte na Nivách."
         />
+      </Section>
+      <Section>
         <Hero
-          icon={<SoupCultureIcon />}
+          icon={<HateFreeZoneIcon />}
           headline="Hate-free Zone"
           description="Islamská nadácia na Slovensku už viac ako 23 rokov buduje
             mosty porozumenia. Prepája a zbližuje cudzinecké a moslimské
@@ -41,6 +45,8 @@ function IndexPage() {
             oslovila s požiadavkou na tvorbu novej vizuálnej identity a
             reklamnej kampane."
         />
+      </Section>
+      <Section>
         <Hero
           rtl
           icon={<ApartmeaIcon />}

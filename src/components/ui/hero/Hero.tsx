@@ -4,6 +4,7 @@ import Heading from '../../text/heading/Heading';
 import Paragraph from '../../text/paragraph/Paragraph';
 
 import * as styles from './Hero.module.css';
+import Link from '../link/Link';
 
 interface HeroProps {
   headline: string;
@@ -24,6 +25,7 @@ export default function Hero({
       <div className={styles.content}>
         <Heading>{headline}</Heading>
         <Paragraph>{description}</Paragraph>
+        <Link to="/blog">Viac o projekte</Link>
       </div>
     </div>
   );

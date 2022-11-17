@@ -1,0 +1,16 @@
+.link {
+  background-color: var(--secondary);
+  color: #302a26;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+  border-radius: 3px;
+}
+.link:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.actvie {
+  color: red;
+}
