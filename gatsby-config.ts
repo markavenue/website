@@ -17,6 +17,23 @@ const config: GatsbyConfig = {
         extensions: ['js', 'jsx', 'ts', 'tsx'],
       },
     },
+    {
+      resolve: 'gatsby-omni-font-loader',
+      options: {
+        enableListener: true,
+        preconnect: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+        web: [
+          {
+            name: 'Noto Serif Georgian',
+            file: 'https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@300;400&display=swap',
+          },
+          {
+            name: 'Anton',
+            file: 'https://fonts.googleapis.com/css2?family=Anton&display=swap'
+          }
+        ],
+      },
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-dts-css-modules',
   ],
