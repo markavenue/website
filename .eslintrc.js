@@ -66,6 +66,7 @@ module.exports = {
       },
       rules: {
         ...commonRules,
+        'react/require-default-props': 'off',
       },
     },
   ],
