@@ -2,3 +2,7 @@
   --primary: #e6433f;
   --secondary: #e7c231;
 }
+
+body {
+  font-family: 'Noto Serif Georgian', serif;
+}
