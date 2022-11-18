@@ -17,14 +17,8 @@ rulesDirPlugin.RULES_DIR = path.resolve(path.join(
   'eslint-rules',
 ));
 
-const presetIndex = baseConfig.extends.indexOf(require.resolve(
-  'gatsby/dist/utils/eslint/required',
-));
-
 const commonPresets = [
-  // Local rules have to be prefixed with `rulesdir/`. Let's remove the preset
-  // and load the rules in `rules` instead.
-  ...baseConfig.extends.filter((value, index) => index !== presetIndex),
+  'react-app',
   'airbnb',
   'airbnb/hooks',
   'plugin:sonarjs/recommended',
