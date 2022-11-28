@@ -43,6 +43,7 @@ module.exports = {
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
   parser: undefined,
+  parserOptions: undefined,
   rules: {
     ...commonRules,
   },
