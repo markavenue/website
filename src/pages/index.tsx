@@ -7,6 +7,12 @@ import ApartmeaIcon from '../assets/apartmea-icon.svg';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
 import SoupCultureIcon from '../assets/soup-culture-icon.svg';
+import {
+  APARTMEA_PAGE,
+  FRANGO_PAGE,
+  HATE_FREE_ZONE_PAGE,
+  SOUPCULTURE_PAGE,
+} from '../const/routes';
 
 function IndexPage() {
   return (
@@ -21,7 +27,7 @@ function IndexPage() {
             kampaň. Okrem uplatňovania online reklamných nástrojov sme
             spolupracovali aj s mikroinfluencermi pre ešte efektívnejšie šírenie
             povedomia."
-          linkTo="/"
+          linkTo={SOUPCULTURE_PAGE}
         />
       </Section>
       <Section>
@@ -34,7 +40,7 @@ function IndexPage() {
             kuracieho mäska. Vďaka spolupráci s nami získali úplne novú,
             originálnu vizuálnu identitu, ktorou táto sieť púta pozornosť ľudí
             vo foodcourte na Nivách."
-          linkTo="/"
+          linkTo={FRANGO_PAGE}
         />
       </Section>
       <Section>
@@ -46,7 +52,7 @@ function IndexPage() {
             minority so slovenskou verejnosťou cez otvorený dialóg. Nadácia nás
             oslovila s požiadavkou na tvorbu novej vizuálnej identity a
             reklamnej kampane."
-          linkTo="/"
+          linkTo={HATE_FREE_ZONE_PAGE}
         />
       </Section>
       <Section>
@@ -58,7 +64,7 @@ function IndexPage() {
             cestu k rezervácii apartmánov. Našou úlohou bolo vytvoriť funkčnú
             značku pre rakúsky trh. Okrem návrhu vizuálu sme sa zaoberali aj
             namingom a komunikačnou identitou."
-          linkTo="/"
+          linkTo={APARTMEA_PAGE}
         />
       </Section>
     </main>
