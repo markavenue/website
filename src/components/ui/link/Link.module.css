@@ -1,4 +1,9 @@
-.link {
+.link:focus {
+  outline: 2px solid var(--primary);
+  border-radius: 3px;
+}
+
+.primary.link {
   background-color: var(--secondary);
   color: #302a26;
   text-decoration: none;
@@ -6,14 +11,16 @@
   display: inline-block;
   border-radius: 3px;
 }
-.link:hover {
+.primary.link:hover {
   background-color: var(--primary);
   color: #fff;
 }
-.link:focus {
-  outline: 2px solid var(--primary);
-}
 
-.actvie {
-  color: red;
+.image {
+  color: #000;
+  transition: transform .2s ease-in-out;
+}
+.image:hover {
+  color: var(--primary);
+  transform: scale(.9);
 }

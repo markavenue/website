@@ -21,6 +21,7 @@ function IndexPage() {
             kampaň. Okrem uplatňovania online reklamných nástrojov sme
             spolupracovali aj s mikroinfluencermi pre ešte efektívnejšie šírenie
             povedomia."
+          linkTo="/"
         />
       </Section>
       <Section>
@@ -33,6 +34,7 @@ function IndexPage() {
             kuracieho mäska. Vďaka spolupráci s nami získali úplne novú,
             originálnu vizuálnu identitu, ktorou táto sieť púta pozornosť ľudí
             vo foodcourte na Nivách."
+          linkTo="/"
         />
       </Section>
       <Section>
@@ -44,6 +46,7 @@ function IndexPage() {
             minority so slovenskou verejnosťou cez otvorený dialóg. Nadácia nás
             oslovila s požiadavkou na tvorbu novej vizuálnej identity a
             reklamnej kampane."
+          linkTo="/"
         />
       </Section>
       <Section>
@@ -55,6 +58,7 @@ function IndexPage() {
             cestu k rezervácii apartmánov. Našou úlohou bolo vytvoriť funkčnú
             značku pre rakúsky trh. Okrem návrhu vizuálu sme sa zaoberali aj
             namingom a komunikačnou identitou."
+          linkTo="/"
         />
       </Section>
     </main>

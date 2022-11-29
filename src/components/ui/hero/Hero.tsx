@@ -7,6 +7,7 @@ import * as styles from './Hero.module.css';
 import Link from '../link/Link';
 
 interface HeroProps {
+  linkTo: string;
   headline: string;
   description: string;
   icon: ReactNode;
@@ -14,6 +15,7 @@ interface HeroProps {
 }
 
 export default function Hero({
+  linkTo,
   headline,
   description,
   icon,
@@ -21,11 +23,13 @@ export default function Hero({
 }: HeroProps) {
   return (
     <div className={classNames(styles.hero, rtl && styles.rtl)}>
-      <div className={styles.icon}>{icon}</div>
+      <div className={styles.icon}>
+        <Link to={linkTo} variant='image'>{icon}</Link>
+      </div>
       <div className={styles.content}>
         <Heading>{headline}</Heading>
         <Paragraph>{description}</Paragraph>
-        <Link to="/blog">Viac o projekte</Link>
+        <Link to={linkTo}>Viac o projekte</Link>
       </div>
     </div>
   );
