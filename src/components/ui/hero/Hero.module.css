@@ -1,12 +1,9 @@
 .hero {
+  padding: 24px;
   display: flex;
+  flex-direction: column;
+  text-align: center;
 }
-
-.rtl {
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
 .icon {
   flex: 1;
   display: flex;
@@ -15,15 +12,26 @@
   padding: 0 40px;
 }
 .icon svg {
+  padding: 24px;
   max-height: 300px;
   max-width: 300px;
   height: auto;
   color: inherit;
 }
-
-.content {
-  flex: 2;
-}
 .content > * {
   margin-top: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+  }
+  .content {
+    flex: 2;
+  }
+  .rtl {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
 }
