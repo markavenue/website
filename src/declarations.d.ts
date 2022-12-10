@@ -1,3 +1,8 @@
 declare module '*.svg' {
   export default React.FunctionComponent<React.SVGAttributes<SVGElement>>;
 }
+
+declare module '*.mp4' {
+  const video: string;
+  export default video;
+}

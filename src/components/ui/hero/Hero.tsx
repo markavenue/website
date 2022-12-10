@@ -24,7 +24,9 @@ export default function Hero({
   return (
     <div className={classNames(styles.hero, rtl && styles.rtl)}>
       <div className={styles.icon}>
-        <Link to={linkTo} variant='image'>{icon}</Link>
+        <Link to={linkTo} variant="image">
+          {icon}
+        </Link>
       </div>
       <div className={styles.content}>
         <Heading>{headline}</Heading>

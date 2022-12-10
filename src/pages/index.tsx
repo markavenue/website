@@ -13,10 +13,19 @@ import {
   HATE_FREE_ZONE_PAGE,
   SOUPCULTURE_PAGE,
 } from '../const/routes';
+import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
 
 function IndexPage() {
+  const refs = {
+    portfolio: React.useRef<HTMLDivElement>(null),
+    aboutUs: React.useRef<HTMLDivElement>(null),
+    contact: React.useRef<HTMLDivElement>(null),
+  };
+
   return (
     <main>
+      <HeroBanner refs={refs} />
+      <div ref={refs.portfolio} />
       <Section>
         <Hero
           icon={<SoupCultureIcon />}
@@ -67,6 +76,8 @@ function IndexPage() {
           linkTo={APARTMEA_PAGE}
         />
       </Section>
+      <div ref={refs.aboutUs} />
+      <div ref={refs.contact} />
     </main>
   );
 }
