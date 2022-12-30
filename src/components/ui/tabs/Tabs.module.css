@@ -6,13 +6,13 @@
 }
 
 .trigger[data-state='active'] {
-  background: var(--primary);
-  color: #302a26;
+  background: #e7c231;
+  color: #292929;
 }
 
 .content {
-  background: var(--primary);
-  color: #333;
+  background: #d7b431;
+  color: #292929;
   text-align: left;
   padding: 24px 48px;
 }
