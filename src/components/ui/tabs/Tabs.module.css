@@ -3,6 +3,7 @@
   color: #fff;
   border: none;
   padding: 16px 24px;
+  font-family: 'Red Hat Mono', monospace;
 }
 
 .trigger[data-state='active'] {

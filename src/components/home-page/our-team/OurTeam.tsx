@@ -8,7 +8,7 @@ import * as styles from './OurTeam.module.css';
 
 export default React.forwardRef<HTMLDivElement>((_, ref) => (
   <Section ref={ref} variant="dark" className={styles.ourTeam}>
-    <Heading className={styles.heading}>Náš tím</Heading>
+    <Heading>Náš tím</Heading>
     <Paragraph className={styles.paragraph}>
       Interný tím sa skladá z 3 tvorcov, ktorí majú niekoľkoročné skúsenosti s
       marketingom a kreatívou. Riadime sieť externých tvorcov, čo nám umožňuje

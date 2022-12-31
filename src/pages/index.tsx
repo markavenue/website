@@ -15,6 +15,7 @@ import {
 } from '../const/routes';
 import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
 import OurTeam from '../components/home-page/our-team/OurTeam';
+import Footer from '../components/ui/footer/Footer';
 
 function IndexPage() {
   const refs = {
@@ -27,7 +28,7 @@ function IndexPage() {
     <main>
       <HeroBanner refs={refs} />
       <div ref={refs.portfolio} />
-      <Section>
+      <Section withSpacing>
         <Hero
           icon={<SoupCultureIcon />}
           headline="Soupculture"
@@ -40,7 +41,7 @@ function IndexPage() {
           linkTo={SOUPCULTURE_PAGE}
         />
       </Section>
-      <Section>
+      <Section withSpacing>
         <Hero
           rtl
           icon={<FrangoIcon />}
@@ -53,7 +54,7 @@ function IndexPage() {
           linkTo={FRANGO_PAGE}
         />
       </Section>
-      <Section>
+      <Section withSpacing>
         <Hero
           icon={<HateFreeZoneIcon />}
           headline="Hate-free Zone"
@@ -65,7 +66,7 @@ function IndexPage() {
           linkTo={HATE_FREE_ZONE_PAGE}
         />
       </Section>
-      <Section>
+      <Section withSpacing>
         <Hero
           rtl
           icon={<ApartmeaIcon />}
@@ -78,7 +79,7 @@ function IndexPage() {
         />
       </Section>
       <OurTeam ref={refs.aboutUs} />
-      <div ref={refs.contact} />
+      <Footer ref={refs.contact} />
     </main>
   );
 }

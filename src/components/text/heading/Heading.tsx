@@ -5,8 +5,23 @@ import * as styles from './Heading.module.css';
 
 interface HeadingProps extends PropsWithChildren {
   className?: string;
+  variant?: 'red' | 'yellow';
 }
 
-export default function Heading({ children, className }: HeadingProps) {
-  return <h1 className={classNames(styles.heading, className)}>{children}</h1>;
+export default function Heading({
+  children,
+  className,
+  variant = 'red',
+}: HeadingProps) {
+  return (
+    <h1
+      className={classNames(
+        styles.heading,
+        className,
+        variant === 'yellow' && styles.yellow
+      )}
+    >
+      {children}
+    </h1>
+  );
 }
