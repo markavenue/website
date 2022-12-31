@@ -9,15 +9,19 @@
   text-decoration: none;
 }
 .headerButton {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Red Hat Mono', monospace;
   color: #fff;
   text-decoration: none;
   padding: 8px 16px;
   font-weight: 400;
+  font-size: 14px;
   text-transform: uppercase;
   background: transparent;
   border: none;
   cursor: pointer;
+}
+.headerButton:hover {
+  color: var(--primary);
 }
 .menu {
   padding: 0;
