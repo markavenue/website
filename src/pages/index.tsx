@@ -14,6 +14,7 @@ import {
   SOUPCULTURE_PAGE,
 } from '../const/routes';
 import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
+import OurTeam from '../components/home-page/our-team/OurTeam';
 
 function IndexPage() {
   const refs = {
@@ -76,6 +77,7 @@ function IndexPage() {
           linkTo={APARTMEA_PAGE}
         />
       </Section>
+      <OurTeam />
       <div ref={refs.aboutUs} />
       <div ref={refs.contact} />
     </main>

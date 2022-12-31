@@ -1,0 +1,44 @@
+.ourTeam {
+  color: #fff;
+  font-family: 'Red Hat Mono', monospace;
+  text-align: center;
+  padding: 48px 0;
+}
+
+.heading {
+  text-transform: uppercase;
+  margin: 24px 0;
+}
+
+.paragraph {
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.image {
+  margin: 0 0 16px;
+}
+
+.row {
+  margin: 48px 0;
+  text-align: left;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row p {
+  margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .row {
+    flex-direction: row;
+  }
+  .row > * {
+    flex: 1;
+  }
+  .heading {
+    font-size: 80px;
+  }
+}

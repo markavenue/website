@@ -30,7 +30,7 @@ export default function Hero({
       </div>
       <div className={styles.content}>
         <Heading>{headline}</Heading>
-        <Paragraph>{description}</Paragraph>
+        <Paragraph className={styles.paragraph}>{description}</Paragraph>
         <Link to={linkTo}>Viac o projekte</Link>
       </div>
     </div>

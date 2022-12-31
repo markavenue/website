@@ -1,7 +1,12 @@
+import classNames from 'classnames';
 import React, { PropsWithChildren } from 'react';
 
 import * as styles from './Paragraph.module.css';
 
-export default function Paragraph({ children }: PropsWithChildren) {
-  return <p className={styles.p}>{children}</p>;
+interface ParagraphProps extends PropsWithChildren {
+  className?: string;
+}
+
+export default function Paragraph({ children, className }: ParagraphProps) {
+  return <p className={classNames(styles.paragraph, className)}>{children}</p>;
 }

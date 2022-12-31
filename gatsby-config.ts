@@ -31,6 +31,10 @@ const config: GatsbyConfig = {
             name: 'Anton',
             file: 'https://fonts.googleapis.com/css2?family=Anton&display=swap',
           },
+          {
+            name: 'Red Hat Mono',
+            file: 'https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@400;500&display=swap',
+          },
         ],
       },
     },
@@ -44,6 +48,8 @@ const config: GatsbyConfig = {
         },
       },
     },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
   ],
 };
 
