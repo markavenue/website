@@ -20,5 +20,5 @@ export default forwardRef<HTMLDivElement, SectionProps>(
       return <div className={styles.dark}>{section}</div>;
     }
     return section;
-  }
+  },
 );
