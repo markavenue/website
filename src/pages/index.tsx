@@ -77,8 +77,7 @@ function IndexPage() {
           linkTo={APARTMEA_PAGE}
         />
       </Section>
-      <OurTeam />
-      <div ref={refs.aboutUs} />
+      <OurTeam ref={refs.aboutUs} />
       <div ref={refs.contact} />
     </main>
   );
