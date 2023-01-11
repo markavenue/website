@@ -16,6 +16,7 @@ import {
 import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
 import OurTeam from '../components/home-page/our-team/OurTeam';
 import Footer from '../components/ui/footer/Footer';
+import Partners from '../components/home-page/partners/Partners';
 
 function IndexPage() {
   const refs = {
@@ -79,6 +80,7 @@ function IndexPage() {
         />
       </Section>
       <OurTeam ref={refs.aboutUs} />
+      <Partners />
       <Footer ref={refs.contact} />
     </main>
   );
