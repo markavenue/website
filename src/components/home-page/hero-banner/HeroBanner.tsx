@@ -1,18 +1,13 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import * as styles from './Common.module.css';
 import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
-import Header, { HeaderProps } from '../../ui/header/Header';
+import Header from '../../ui/header/Header';
 
 import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
 import ServicesTabs from '../services-tabs/ServicesTabs';
 
-interface HeroBannerProps {
-  refs: Omit<HeaderProps['refs'], 'services'>;
-}
-
-export default function HeroBanner({ refs }: HeroBannerProps) {
-  const servicesRef = useRef<HTMLDivElement>(null);
+export default function HeroBanner() {
   return (
     <div className={styles.container}>
       <video autoPlay muted loop className={styles.video}>
@@ -20,7 +15,7 @@ export default function HeroBanner({ refs }: HeroBannerProps) {
       </video>
       <div className={styles.overlay} />
       <div className={styles.wrapper}>
-        <Header refs={{ ...refs, services: servicesRef }} />
+        <Header />
         <div className={styles.content}>
           <h1 className={styles.headline}>
             Marketing
@@ -40,7 +35,8 @@ export default function HeroBanner({ refs }: HeroBannerProps) {
               <ArrowDownIcon />
             </button>
           </div>
-          <ServicesTabs ref={servicesRef} />
+          <div id="services" />
+          <ServicesTabs />
         </div>
       </div>
     </div>

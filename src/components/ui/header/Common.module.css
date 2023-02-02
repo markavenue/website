@@ -5,6 +5,9 @@
   padding: 8px 24px;
   flex-direction: column;
 }
+.header:not(.transparent) {
+  background: #302a27;
+}
 .logoLink {
   text-decoration: none;
 }

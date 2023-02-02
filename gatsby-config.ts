@@ -50,6 +50,12 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        duration: 200,
+      },
+    },
   ],
 };
 

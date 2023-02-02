@@ -19,16 +19,10 @@ import Footer from '../components/ui/footer/Footer';
 import Partners from '../components/home-page/partners/Partners';
 
 function IndexPage() {
-  const refs = {
-    portfolio: React.useRef<HTMLDivElement>(null),
-    aboutUs: React.useRef<HTMLDivElement>(null),
-    contact: React.useRef<HTMLDivElement>(null),
-  };
-
   return (
     <main>
-      <HeroBanner refs={refs} />
-      <div ref={refs.portfolio} />
+      <HeroBanner />
+      <div id="portfolio" />
       <Section withSpacing>
         <Hero
           icon={<SoupCultureIcon />}
@@ -79,9 +73,11 @@ function IndexPage() {
           linkTo={APARTMEA_PAGE}
         />
       </Section>
-      <OurTeam ref={refs.aboutUs} />
+      <div id="aboutUs" />
+      <OurTeam />
       <Partners />
-      <Footer ref={refs.contact} />
+      <div id="contact" />
+      <Footer />
     </main>
   );
 }

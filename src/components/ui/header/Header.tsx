@@ -1,38 +1,53 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
+import classNames from 'classnames';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import * as styles from './Common.module.css';
 import Logo from '../logo/Logo';
-import HeaderButton from './HeaderButton';
 
 export interface HeaderProps {
-  refs: {
-    services: RefObject<HTMLDivElement>;
-    portfolio: RefObject<HTMLDivElement>;
-    aboutUs: RefObject<HTMLDivElement>;
-    contact: RefObject<HTMLDivElement>;
-  };
+  transparent?: boolean;
 }
 
-export default function Header({ refs }: HeaderProps) {
+const NAVIGATION_ITEMS = [
+  {
+    to: '/#services',
+    label: 'Služby',
+  },
+  {
+    to: '/#portfolio',
+    label: 'Portfólio',
+  },
+  {
+    to: '/#aboutUs',
+    label: 'O nás',
+  },
+  {
+    to: '/#contact',
+    label: 'Kontakt',
+  },
+] as const;
+
+export default function Header({ transparent = false }: HeaderProps) {
   return (
-    <header className={styles.header}>
+    <header
+      className={classNames(styles.header, transparent && styles.transparent)}
+    >
       <Link to="/" className={styles.logoLink}>
         <Logo />
       </Link>
       <div className={styles.menu}>
-        <HeaderButton onClick={() => refs.services.current?.scrollIntoView()}>
-          Služby
-        </HeaderButton>
-        <HeaderButton onClick={() => refs.portfolio.current?.scrollIntoView()}>
-          Portfólio
-        </HeaderButton>
-        <HeaderButton onClick={() => refs.aboutUs.current?.scrollIntoView()}>
-          O nás
-        </HeaderButton>
-        <HeaderButton onClick={() => refs.contact.current?.scrollIntoView()}>
-          Kontakt
-        </HeaderButton>
+        {NAVIGATION_ITEMS.map(({ to, label }) => (
+          <AnchorLink
+            key={to}
+            to={to}
+            className={styles.headerButton}
+            stripHash
+          >
+            {label}
+          </AnchorLink>
+        ))}
       </div>
     </header>
   );
