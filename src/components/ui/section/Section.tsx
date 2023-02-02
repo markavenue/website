@@ -10,14 +10,16 @@ interface SectionProps extends PropsWithChildren {
 }
 
 export default forwardRef<HTMLDivElement, SectionProps>(
-  ({ children, variant = 'normal', className, withSpacing = false }, ref) => {
+  ({
+    children, variant = 'normal', className, withSpacing = false,
+  }, ref) => {
     const section = (
       <section
         ref={ref}
         className={classNames(
           styles.section,
           className,
-          withSpacing && styles.withSpacing
+          withSpacing && styles.withSpacing,
         )}
       >
         {children}
@@ -28,5 +30,5 @@ export default forwardRef<HTMLDivElement, SectionProps>(
       return <div className={styles.dark}>{section}</div>;
     }
     return section;
-  }
+  },
 );

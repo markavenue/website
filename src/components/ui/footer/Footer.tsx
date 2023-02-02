@@ -25,7 +25,7 @@ export default forwardRef<HTMLElement>((_, ref) => (
     </Section>
     <Section variant="dark" className={styles.secondaryRow}>
       <div>Mark Avenue 2022</div>
-      <div  className={styles.socials}>
+      <div className={styles.socials}>
         <FooterIconLink href="#TODO">
           <FacebookIcon />
         </FooterIconLink>

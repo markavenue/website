@@ -18,7 +18,7 @@ export default function Heading({
       className={classNames(
         styles.heading,
         className,
-        variant === 'yellow' && styles.yellow
+        variant === 'yellow' && styles.yellow,
       )}
     >
       {children}
