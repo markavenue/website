@@ -9,6 +9,9 @@
 .heading.yellow {
   color: var(--secondary);
 }
+.heading.normal {
+  color: var(--normal);
+}
 
 @media screen and (min-width: 1025px) {
   .heading {

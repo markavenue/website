@@ -1,14 +1,16 @@
 import * as React from 'react';
 import PageTitle from '../components/page-title/PageTitle';
-import Footer from '../components/ui/footer/Footer';
-import Header from '../components/ui/header/Header';
+import Heading from '../components/text/heading/Heading';
+import Layout from '../components/ui/layout/Layout';
+
+import SoupCultureIcon from '../assets/soup-culture-icon.svg';
 
 function SoupculturePage() {
   return (
-    <main>
-      <Header />
-      <Footer />
-    </main>
+    <Layout>
+      <SoupCultureIcon />
+      <Heading variant="normal">Soupculture</Heading>
+    </Layout>
   );
 }
 

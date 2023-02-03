@@ -5,7 +5,7 @@ import * as styles from './Heading.module.css';
 
 interface HeadingProps extends PropsWithChildren {
   className?: string;
-  variant?: 'red' | 'yellow';
+  variant?: 'red' | 'yellow' | 'normal';
 }
 
 export default function Heading({
@@ -19,6 +19,8 @@ export default function Heading({
         styles.heading,
         className,
         variant === 'yellow' && styles.yellow,
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+        variant === 'normal' && styles.normal,
       )}
     >
       {children}
