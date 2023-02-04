@@ -11,6 +11,8 @@
 }
 .heading.normal {
   color: var(--normal);
+  text-align: center;
+  font-size: 80px;
 }
 
 @media screen and (min-width: 1025px) {
