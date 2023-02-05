@@ -34,7 +34,7 @@
 }
 
 .headline {
-  font-family: 'Anton', sans-serif;
+  font-family: var(--sans-serif);
   font-size: 58px;
   color: #fff;
   text-transform: uppercase;
@@ -44,7 +44,7 @@
 }
 
 .subtitle {
-  font-family: 'Noto Serif Georgian', serif;
+  font-family: var(--serif);
   color: #fff;
   max-width: 600px;
   font-size: 16px;

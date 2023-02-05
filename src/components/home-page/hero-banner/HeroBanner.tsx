@@ -15,7 +15,7 @@ export default function HeroBanner() {
       </video>
       <div className={styles.overlay} />
       <div className={styles.wrapper}>
-        <Header />
+        <Header transparent />
         <div className={styles.content}>
           <h1 className={styles.headline}>
             Marketing

@@ -1,6 +1,6 @@
 .heading {
   color: var(--primary);
-  font-family: 'Anton', sans-serif;
+  font-family: var(--sans-serif);
   font-size: 48px;
   font-weight: 400;
   margin: 30px 0;
@@ -9,6 +9,7 @@
 .heading.yellow {
   color: var(--secondary);
 }
+
 .heading.normal {
   color: var(--normal);
   text-align: center;

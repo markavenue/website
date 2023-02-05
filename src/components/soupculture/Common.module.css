@@ -3,32 +3,9 @@
   height: 280px;
   border: none;
 }
-.container {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.article {
-  margin-top: 16px;
-}
 
 @media screen and (min-width: 1025px) {
   .video {
-    width: 800px;
-    height: 500px;
-  }
-
-  .swiper {
-    flex: 3;
-  }
-
-  .article {
-    flex: 2;
-    margin-top: 0;
-  }
-
-  .container {
-    display: flex;
-    gap: 24px;
+    height: 400px;
   }
 }

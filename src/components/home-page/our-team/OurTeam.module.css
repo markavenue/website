@@ -1,6 +1,6 @@
 .ourTeam {
   color: #fff;
-  font-family: 'Red Hat Mono', monospace;
+  font-family: var(--mono);
   text-align: center;
   padding: 48px 0;
 }

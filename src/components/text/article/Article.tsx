@@ -1,9 +1,11 @@
 import React, { PropsWithChildren } from 'react';
 
-interface ArticleProps extends PropsWithChildren {
-  className?: string;
-}
+import * as styles from './Common.module.css';
 
-export default function Article({ className, children }: ArticleProps) {
-  return <article className={className}>{children}</article>;
+export default function Article({ children }: PropsWithChildren) {
+  return (
+    <article className={styles.article}>
+      {children}
+    </article>
+  );
 }

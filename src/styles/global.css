@@ -2,9 +2,16 @@
   --primary: #e6433f;
   --secondary: #e7c231;
   --normal: #302a26;
+
+  --gap: 24px;
+  --gutter: 48px;
+
+  --serif: 'Noto Serif Georgian', serif;
+  --mono: 'Red Hat Mono', monospace;
+  --sans-serif: 'Anton', sans-serif;
 }
 
 body {
-  font-family: 'Noto Serif Georgian', serif;
+  font-family: var(--serif);
   background-color: #faf5e8;
 }

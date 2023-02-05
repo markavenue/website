@@ -4,15 +4,17 @@ import Swiper from './Swiper';
 import * as styles from './Common.module.css';
 import Article from '../text/article/Article';
 import H1 from '../text/article/H1';
+
 import Paragraph from '../text/article/Paragraph';
 import Description from '../text/article/Description';
+import Container from '../ui/layout/Container';
 
 export default function Content() {
   return (
     <section>
-      <div className={styles.container}>
-        <Swiper className={styles.swiper} />
-        <Article className={styles.article}>
+      <Container>
+        <Swiper />
+        <Article>
           <H1>O projekte</H1>
           <Paragraph>
             Koncept polievky v poháriku alebo bezodpadový street food
@@ -32,19 +34,21 @@ export default function Content() {
             </Description>
           </dl>
         </Article>
-      </div>
-      <H1>Promo video</H1>
-      <iframe
-        className={styles.video}
-        width="1100"
-        height="500"
-        src="https://www.youtube.com/embed/EE4NJbuIHX0"
-        title="YouTube video player"
-        frameBorder="0"
-        // eslint-disable-next-line max-len
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-      />
+      </Container>
+      <Container rtl>
+        <iframe
+          className={styles.video}
+          width="1100"
+          height="500"
+          src="https://www.youtube.com/embed/EE4NJbuIHX0"
+          title="YouTube video player"
+          frameBorder="0"
+          // eslint-disable-next-line max-len
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+        <H1>Promo video</H1>
+      </Container>
     </section>
   );
 }

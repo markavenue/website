@@ -4,16 +4,14 @@
   align-items: center;
   padding: 8px 24px;
   flex-direction: column;
-}
-.header:not(.transparent) {
-  background: #302a27;
+  border-bottom: 1px dashed #e5dfcf;
 }
 .logoLink {
   text-decoration: none;
 }
-.headerButton {
-  font-family: 'Red Hat Mono', monospace;
-  color: #fff;
+.headerLink {
+  font-family: var(--mono);
+  color: #302a27;
   text-decoration: none;
   padding: 8px 16px;
   font-weight: 400;
@@ -22,6 +20,12 @@
   background: transparent;
   border: none;
   cursor: pointer;
+}
+.header.transparent .headerLink {
+  color: #fff;
+}
+.header.transparent {
+  border-bottom: none;
 }
 .headerButton:hover {
   color: var(--primary);

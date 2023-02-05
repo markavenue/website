@@ -35,14 +35,14 @@ export default function Header({ transparent = false }: HeaderProps) {
       className={classNames(styles.header, transparent && styles.transparent)}
     >
       <Link to="/" className={styles.logoLink}>
-        <Logo />
+        <Logo inverse={transparent} />
       </Link>
       <div className={styles.menu}>
         {NAVIGATION_ITEMS.map(({ to, label }) => (
           <AnchorLink
             key={to}
             to={to}
-            className={styles.headerButton}
+            className={styles.headerLink}
             stripHash
           >
             {label}

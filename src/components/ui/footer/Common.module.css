@@ -6,14 +6,14 @@
 .secondaryRow {
   display: flex;
   justify-content: space-between;
-  font-family: 'Red Hat Mono', monospace;
+  font-family: var(--mono);
   color: #fff;
   padding: 24px;
   font-size: 12px;
 }
 
 .footerLink {
-  font-family: 'Red Hat Mono', monospace;
+  font-family: var(--mono);
   color: #fff;
   text-decoration: none;
   font-size: 18px;
