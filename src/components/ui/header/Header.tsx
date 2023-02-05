@@ -37,18 +37,13 @@ export default function Header({ transparent = false }: HeaderProps) {
       <Link to="/" className={styles.logoLink}>
         <Logo inverse={transparent} />
       </Link>
-      <div className={styles.menu}>
+      <nav className={styles.nav}>
         {NAVIGATION_ITEMS.map(({ to, label }) => (
-          <AnchorLink
-            key={to}
-            to={to}
-            className={styles.headerLink}
-            stripHash
-          >
+          <AnchorLink key={to} to={to} className={styles.headerLink} stripHash>
             {label}
           </AnchorLink>
         ))}
-      </div>
+      </nav>
     </header>
   );
 }
