@@ -27,7 +27,7 @@
 .header.transparent {
   border-bottom: none;
 }
-.headerButton:hover {
+.header .headerLink:hover {
   color: var(--primary);
 }
 .nav {
@@ -39,7 +39,7 @@
   .header {
     flex-direction: row;
   }
-  .headerButton {
+  .headerLink {
     padding: 8px 16px;
   }
 }
