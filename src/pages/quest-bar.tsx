@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import PageTitle from '../components/page-title/PageTitle';
 import Content from '../components/quest-bar/Content';
 import Heading from '../components/text/heading/Heading';

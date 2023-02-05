@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import ApartmeaIcon from '../assets/apartmea-icon.svg';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Content from '../components/hate-free-zone/Content';
 import PageTitle from '../components/page-title/PageTitle';
 import Heading from '../components/text/heading/Heading';
