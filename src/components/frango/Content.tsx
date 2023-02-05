@@ -24,7 +24,6 @@ export default function Content() {
             Špecializuje na chutné a šťavnaté jedlá z kuracieho mäska. Vďaka
             Spolupráci s nami získali úplne novú, originálnu vizuálnu identitu,
             Ktorou táto sieť púta pozornosť ľudí vo foodcourte na nivách.
-            Klient: Frango rok: 2022 úloha: brand development, vizuálna identita
           </Paragraph>
           <dl>
             <Description title="Klient:">Frango</Description>

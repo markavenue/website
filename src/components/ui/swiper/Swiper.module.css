@@ -1,4 +1,5 @@
 .thumbs {
   max-width: 450px;
   margin-bottom: var(--gap);
+  cursor: pointer;
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import { SwiperSlide } from 'swiper/react';
 import Article from '../text/article/Article';
 import Description from '../text/article/Description';
 import Paragraph from '../text/article/Paragraph';
@@ -8,13 +10,75 @@ import HateFreeVideo1 from '../../assets/hate-free-video-1.mp4';
 import HateFreeVideo2 from '../../assets/hate-free-video-2.mp4';
 import Video from '../ui/video/Video';
 import * as styles from './Common.module.css';
+import MainSwiper from '../ui/swiper/MainSwiper';
+import useSwiper from '../ui/swiper/use-swiper';
+import ThumbSwiper from '../ui/swiper/ThumbSwiper';
+
+const IMAGES = [
+  <StaticImage src="../../assets/hate-free-1.png" alt="" />,
+  <StaticImage src="../../assets/hate-free-2.png" alt="" />,
+  <StaticImage src="../../assets/hate-free-3.png" alt="" />,
+  <StaticImage src="../../assets/hate-free-4.png" alt="" />,
+  <StaticImage src="../../assets/hate-free-5.png" alt="" />,
+];
+
+const THUMBS = [
+  <StaticImage
+    src="../../assets/hate-free-1.png"
+    width={100}
+    height={100}
+    objectFit="cover"
+    alt=""
+  />,
+  <StaticImage
+    src="../../assets/hate-free-2.png"
+    width={100}
+    height={100}
+    objectFit="cover"
+    alt=""
+  />,
+  <StaticImage
+    src="../../assets/hate-free-3.png"
+    width={100}
+    height={100}
+    objectFit="cover"
+    alt=""
+  />,
+  <StaticImage
+    src="../../assets/hate-free-4.png"
+    width={100}
+    height={100}
+    objectFit="cover"
+    alt=""
+  />,
+  <StaticImage
+    src="../../assets/hate-free-5.png"
+    width={100}
+    height={100}
+    objectFit="cover"
+    alt=""
+  />,
+];
 
 export default function Content() {
+  const { swiper, setSwiper } = useSwiper();
+
   return (
     <>
       <Container>
-        <StaticImage src="../../assets/hate-free-1.png" alt="" />
+        <MainSwiper swiper={swiper}>
+          {IMAGES.map((image, key) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <SwiperSlide key={key}>{image}</SwiperSlide>
+          ))}
+        </MainSwiper>
         <Article>
+          <ThumbSwiper setSwiper={setSwiper}>
+            {THUMBS.map((image, key) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <SwiperSlide key={key}>{image}</SwiperSlide>
+            ))}
+          </ThumbSwiper>
           <dl>
             <Description title="Klient:">Islam online</Description>
             <Description title="Rok:">2022</Description>

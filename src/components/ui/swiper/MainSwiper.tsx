@@ -3,7 +3,7 @@ import { Swiper as SwiperCore } from 'swiper/react';
 import Swiper, { Thumbs } from 'swiper';
 
 export interface MainSwiperProps extends PropsWithChildren {
-  swiper: Swiper | null;
+  swiper?: Swiper;
 }
 
 export default function MainSwiper({ swiper, children }: MainSwiperProps) {

@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { Swiper as SwiperCore } from 'swiper/react';
 import Swiper, { Thumbs } from 'swiper';
 
-import * as styles from "./Swiper.module.css";
+import * as styles from './Swiper.module.css';
 
 export interface ThumbSwiperProps extends PropsWithChildren {
   setSwiper: (swiper: Swiper) => void;

@@ -10,7 +10,7 @@ import MainSwiper from '../ui/swiper/MainSwiper';
 import ThumbSwiper from '../ui/swiper/ThumbSwiper';
 import useSwiper from '../ui/swiper/use-swiper';
 
-export const SLIDES = [
+const IMAGES = [
   <StaticImage src="../../assets/apartmea-1.jpeg" alt="" />,
   <StaticImage src="../../assets/apartmea-2.jpeg" alt="" />,
   <StaticImage src="../../assets/apartmea-3.jpeg" alt="" />,
@@ -44,24 +44,15 @@ export const SLIDES = [
 ];
 
 export default function Content() {
-  const { swiper, setSwiper } = useSwiper();
   return (
     <Container>
-      <MainSwiper swiper={swiper}>
-        {SLIDES.map((image, key) => (
+      <MainSwiper>
+        {IMAGES.map((image, key) => (
           // eslint-disable-next-line react/no-array-index-key
           <SwiperSlide key={key}>{image}</SwiperSlide>
         ))}
       </MainSwiper>
       <Article>
-        <ThumbSwiper setSwiper={setSwiper}>
-          {SLIDES.map((image, key) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <SwiperSlide key={key}>
-              {image}
-            </SwiperSlide>
-          ))}
-        </ThumbSwiper>
         <H1>O projekte</H1>
         <Paragraph>
           Apartmea je spoločnosť, ktorá zjednodušuje zákaznícku cestu k
