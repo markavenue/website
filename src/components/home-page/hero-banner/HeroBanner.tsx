@@ -1,11 +1,10 @@
 import React from 'react';
-
-import * as styles from './Common.module.css';
+import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
 import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
 import Header from '../../ui/header/Header';
-
-import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
 import ServicesTabs from '../services-tabs/ServicesTabs';
+
+import * as styles from './Common.module.css';
 
 export default function HeroBanner() {
   return (

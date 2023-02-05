@@ -1,13 +1,16 @@
 import * as React from 'react';
-import Hero from '../components/ui/hero/Hero';
-import PageTitle from '../components/page-title/PageTitle';
-import Section from '../components/ui/section/Section';
-
 import ApartmeaIcon from '../assets/apartmea-icon.svg';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
-import SoupCultureIcon from '../assets/soup-culture-icon.svg';
 import QuestBarIcon from '../assets/quest-bar-icon.svg';
+import SoupCultureIcon from '../assets/soup-culture-icon.svg';
+import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
+import OurTeam from '../components/home-page/our-team/OurTeam';
+import Partners from '../components/home-page/partners/Partners';
+import PageTitle from '../components/page-title/PageTitle';
+import Footer from '../components/ui/footer/Footer';
+import Hero from '../components/ui/hero/Hero';
+import Section from '../components/ui/section/Section';
 import {
   APARTMEA_PAGE,
   FRANGO_PAGE,
@@ -15,10 +18,6 @@ import {
   QUEST_BAR_PAGE,
   SOUPCULTURE_PAGE,
 } from '../const/routes';
-import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
-import OurTeam from '../components/home-page/our-team/OurTeam';
-import Footer from '../components/ui/footer/Footer';
-import Partners from '../components/home-page/partners/Partners';
 
 function IndexPage() {
   return (

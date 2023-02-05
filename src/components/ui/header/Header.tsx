@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
 import classNames from 'classnames';
+import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import * as styles from './Common.module.css';
 import Logo from '../logo/Logo';
+
+import * as styles from './Common.module.css';
 
 export interface HeaderProps {
   transparent?: boolean;

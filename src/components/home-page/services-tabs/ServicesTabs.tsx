@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
+import useWindowWidth from '../../../hooks/use-window-size';
 import TabsContent from '../../ui/tabs/TabsContent';
 import TabsList from '../../ui/tabs/TabsList';
 import TabsRoot from '../../ui/tabs/TabsRoot';
-import useWindowWidth from '../../../hooks/use-window-size';
+import TabsTrigger from '../../ui/tabs/TabsTrigger';
 
 import * as styles from './ServicesTabs.module.css';
-import TabsTrigger from '../../ui/tabs/TabsTrigger';
 
 const DESKTOP_BREAKPOINT = 1025;
 

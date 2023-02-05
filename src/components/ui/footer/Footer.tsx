@@ -1,15 +1,13 @@
 import React, { forwardRef } from 'react';
-
-import Section from '../section/Section';
-import Heading from '../../text/heading/Heading';
-
-import * as styles from './Common.module.css';
-import FooterLink from './FooterLink';
-
+import FacebookIcon from '../../../assets/facebook.svg';
 import InstagramIcon from '../../../assets/instagram.svg';
 import LinkedInIcon from '../../../assets/linked-in.svg';
-import FacebookIcon from '../../../assets/facebook.svg';
+import Heading from '../../text/heading/Heading';
+import Section from '../section/Section';
 import FooterIconLink from './FooterIconLink';
+import FooterLink from './FooterLink';
+
+import * as styles from './Common.module.css';
 
 export default forwardRef<HTMLElement>((_, ref) => (
   <footer ref={ref}>

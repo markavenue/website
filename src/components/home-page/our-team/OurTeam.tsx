@@ -1,5 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import Heading from '../../text/heading/Heading';
 import Paragraph from '../../text/paragraph/Paragraph';
 import Section from '../../ui/section/Section';

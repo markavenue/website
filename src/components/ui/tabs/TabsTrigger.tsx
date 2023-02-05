@@ -1,5 +1,5 @@
-import { Trigger } from '@radix-ui/react-tabs';
 import React, { ComponentProps } from 'react';
+import { Trigger } from '@radix-ui/react-tabs';
 
 import * as styles from './Tabs.module.css';
 

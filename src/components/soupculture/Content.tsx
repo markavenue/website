@@ -1,13 +1,12 @@
 import React from 'react';
+import Article from '../text/article/Article';
+import Description from '../text/article/Description';
+import H1 from '../text/article/H1';
+import Paragraph from '../text/article/Paragraph';
+import Container from '../ui/layout/Container';
 import Swiper from './Swiper';
 
 import * as styles from './Common.module.css';
-import Article from '../text/article/Article';
-import H1 from '../text/article/H1';
-
-import Paragraph from '../text/article/Paragraph';
-import Description from '../text/article/Description';
-import Container from '../ui/layout/Container';
 
 export default function Content() {
   return (

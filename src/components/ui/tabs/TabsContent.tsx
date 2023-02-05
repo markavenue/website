@@ -1,6 +1,6 @@
+import React from 'react';
 import { Content, TabsContentProps } from '@radix-ui/react-tabs';
 import classNames from 'classnames';
-import React from 'react';
 
 import * as styles from './Tabs.module.css';
 

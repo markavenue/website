@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import React, { PropsWithChildren } from 'react';
+import classNames from 'classnames';
 
 import * as styles from './Heading.module.css';
 

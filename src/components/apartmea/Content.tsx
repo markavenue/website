@@ -1,5 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 import { SwiperSlide } from 'swiper/react';
 import Article from '../text/article/Article';
 import Description from '../text/article/Description';
@@ -7,8 +7,6 @@ import H1 from '../text/article/H1';
 import Paragraph from '../text/article/Paragraph';
 import Container from '../ui/layout/Container';
 import MainSwiper from '../ui/swiper/MainSwiper';
-import ThumbSwiper from '../ui/swiper/ThumbSwiper';
-import useSwiper from '../ui/swiper/use-swiper';
 
 const IMAGES = [
   <StaticImage src="../../assets/apartmea-1.jpeg" alt="" />,

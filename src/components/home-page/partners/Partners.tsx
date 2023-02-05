@@ -1,5 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import * as styles from './Partners.module.css';
 

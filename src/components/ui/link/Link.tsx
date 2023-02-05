@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link as GatsbyLink, GatsbyLinkProps } from 'gatsby';
-
 import classNames from 'classnames';
+import { GatsbyLinkProps, Link as GatsbyLink } from 'gatsby';
+
 import * as styles from './Link.module.css';
 
 interface LinkProps extends Pick<GatsbyLinkProps<unknown>, 'to' | 'children'> {
