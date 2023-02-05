@@ -7,10 +7,12 @@ import ApartmeaIcon from '../assets/apartmea-icon.svg';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
 import SoupCultureIcon from '../assets/soup-culture-icon.svg';
+import QuestBarIcon from '../assets/quest-bar-icon.svg';
 import {
   APARTMEA_PAGE,
   FRANGO_PAGE,
   HATE_FREE_ZONE_PAGE,
+  QUEST_BAR_PAGE,
   SOUPCULTURE_PAGE,
 } from '../const/routes';
 import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
@@ -71,6 +73,16 @@ function IndexPage() {
             značku pre rakúsky trh. Okrem návrhu vizuálu sme sa zaoberali aj
             namingom a komunikačnou identitou."
           linkTo={APARTMEA_PAGE}
+        />
+      </Section>
+      <Section withSpacing>
+        <Hero
+          icon={<QuestBarIcon />}
+          headline="Quest Bar"
+          description="Vytvára sa komunita milovníkov anime, hráčov a geekov. Od
+          fanúšikov pre fanúšikov. Quest bar je jedinečný anime-herný bar v
+          Trnave, ktorý si zaslúžil nový brand."
+          linkTo={QUEST_BAR_PAGE}
         />
       </Section>
       <div id="aboutUs" />

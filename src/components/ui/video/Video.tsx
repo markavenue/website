@@ -6,7 +6,9 @@ interface VideoProps
   className?: string;
 }
 
-export default function Video({ src, width, height, className }: VideoProps) {
+export default function Video({
+  src, width, height, className,
+}: VideoProps) {
   return (
     // eslint-disable-next-line jsx-a11y/media-has-caption
     <video
