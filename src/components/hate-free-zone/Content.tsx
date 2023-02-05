@@ -9,12 +9,13 @@ import HateFreeVideo1 from '../../assets/hate-free-video-1.mp4';
 import HateFreeVideo2 from '../../assets/hate-free-video-2.mp4';
 import Video from '../ui/video/Video';
 import * as styles from './Common.module.css';
+import Swiper from './Swiper';
 
 export default function Content() {
   return (
     <>
       <Container>
-        <StaticImage src="../../assets/hate-free-1.png" alt="" />
+        <Swiper />
         <Article>
           <dl>
             <Description title="Klient:">Islam online</Description>
