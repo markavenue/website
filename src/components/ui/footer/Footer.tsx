@@ -7,11 +7,11 @@ import Section from '../section/Section';
 import FooterIconLink from './FooterIconLink';
 import FooterLink from './FooterLink';
 
-import * as styles from './Common.module.css';
+import { primaryRow, secondaryRow, socials } from './Common.module.css';
 
 export default forwardRef<HTMLElement>((_, ref) => (
   <footer ref={ref}>
-    <Section variant="dark" className={styles.primaryRow}>
+    <Section variant="dark" className={primaryRow}>
       <div>
         <Heading variant="yellow">Zavolajte</Heading>
         <FooterLink href="tel:+421940880930">+421 940 880 930</FooterLink>
@@ -21,9 +21,9 @@ export default forwardRef<HTMLElement>((_, ref) => (
         <FooterLink href="mailto:info@marksoup.sk">info@marksoup.sk</FooterLink>
       </div>
     </Section>
-    <Section variant="dark" className={styles.secondaryRow}>
+    <Section variant="dark" className={secondaryRow}>
       <div>Mark Avenue 2022</div>
-      <div className={styles.socials}>
+      <div className={socials}>
         <FooterIconLink href="#TODO">
           <FacebookIcon />
         </FooterIconLink>

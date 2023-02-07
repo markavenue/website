@@ -12,7 +12,7 @@ import ThumbSwiper from '../ui/swiper/ThumbSwiper';
 import useSwiper from '../ui/swiper/use-swiper';
 import Video from '../ui/video/Video';
 
-import * as styles from './Common.module.css';
+import { grid, video } from './Common.module.css';
 
 const IMAGES = [
   <StaticImage src="../../assets/hate-free-1.png" alt="" />,
@@ -98,9 +98,9 @@ export default function Content() {
           </Paragraph>
         </Article>
       </Container>
-      <div className={styles.grid}>
-        <Video className={styles.video} width={400} src={HateFreeVideo1} />
-        <Video className={styles.video} width={400} src={HateFreeVideo2} />
+      <div className={grid}>
+        <Video className={video} width={400} src={HateFreeVideo1} />
+        <Video className={video} width={400} src={HateFreeVideo2} />
         <Article>
           <Paragraph>
             Kampaň zobrazuje to, že aj moslimovia chcú byť súčasťou spoločenskej

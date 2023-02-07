@@ -4,8 +4,12 @@ import TabsContent from '../../ui/tabs/TabsContent';
 import TabsList from '../../ui/tabs/TabsList';
 import TabsRoot from '../../ui/tabs/TabsRoot';
 import TabsTrigger from '../../ui/tabs/TabsTrigger';
-
-import * as styles from './ServicesTabs.module.css';
+import {
+  content as contentClassName,
+  list,
+  listLarge,
+  root,
+} from './ServicesTabs.module.css';
 
 const DESKTOP_BREAKPOINT = 1025;
 
@@ -91,10 +95,10 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
   const windowWidth = useWindowWidth() ?? 0;
 
   return (
-    <TabsRoot ref={ref} defaultValue="advertising" className={styles.root}>
+    <TabsRoot ref={ref} defaultValue="advertising" className={root}>
       {windowWidth > DESKTOP_BREAKPOINT ? (
         <>
-          <TabsList className={styles.listLarge}>
+          <TabsList className={listLarge}>
             {TABS.map(({ label, key }) => (
               <TabsTrigger value={key} key={`tabs-trigger-${key}`}>
                 {label}
@@ -105,18 +109,18 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
             <TabsContent
               value={key}
               key={`tabs-content-${key}`}
-              className={styles.content}
+              className={contentClassName}
             >
               {content}
             </TabsContent>
           ))}
         </>
       ) : (
-        <TabsList className={styles.list}>
+        <TabsList className={list}>
           {TABS.map(({ label, content, key }) => (
             <React.Fragment key={key}>
               <TabsTrigger value={key}>{label}</TabsTrigger>
-              <TabsContent value={key} className={styles.content}>
+              <TabsContent value={key} className={contentClassName}>
                 {content}
               </TabsContent>
             </React.Fragment>

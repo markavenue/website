@@ -6,7 +6,7 @@ import Paragraph from '../text/article/Paragraph';
 import Container from '../ui/layout/Container';
 import Swiper from './Swiper';
 
-import * as styles from './Common.module.css';
+import { video } from './Common.module.css';
 
 export default function Content() {
   return (
@@ -36,7 +36,7 @@ export default function Content() {
       </Container>
       <Container rtl>
         <iframe
-          className={styles.video}
+          className={video}
           width="1100"
           height="500"
           src="https://www.youtube.com/embed/EE4NJbuIHX0"

@@ -1,7 +1,10 @@
 import React, { forwardRef, PropsWithChildren } from 'react';
 import classNames from 'classnames';
-
-import * as styles from './Section.module.css';
+import {
+  dark,
+  section as sectionClassName,
+  withSpacing as withSpacingClassName,
+} from './Section.module.css';
 
 interface SectionProps extends PropsWithChildren {
   variant?: 'normal' | 'dark';
@@ -17,9 +20,9 @@ export default forwardRef<HTMLDivElement, SectionProps>(
       <section
         ref={ref}
         className={classNames(
-          styles.section,
+          sectionClassName,
           className,
-          withSpacing && styles.withSpacing,
+          withSpacing && withSpacingClassName,
         )}
       >
         {children}
@@ -27,7 +30,7 @@ export default forwardRef<HTMLDivElement, SectionProps>(
     );
 
     if (variant === 'dark') {
-      return <div className={styles.dark}>{section}</div>;
+      return <div className={dark}>{section}</div>;
     }
     return section;
   },

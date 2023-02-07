@@ -10,7 +10,7 @@ import CenterBox from '../ui/layout/CenterBox';
 import Container from '../ui/layout/Container';
 import Row from '../ui/layout/Row';
 
-import * as styles from './Common.module.css';
+import { frangoIcon, grid } from './Common.module.css';
 
 export default function Content() {
   return (
@@ -52,13 +52,13 @@ export default function Content() {
         </CenterBox>
         <CenterBox>
           <StaticImage
-            className={styles.frangoIcon}
+            className={frangoIcon}
             src="../../assets/frango-icon.png"
             alt=""
             objectFit="contain"
           />
         </CenterBox>
-        <div className={styles.grid}>
+        <div className={grid}>
           <StaticImage
             src="../../assets/frango-icon-1.png"
             alt=""

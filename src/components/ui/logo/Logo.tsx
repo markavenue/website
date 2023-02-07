@@ -1,7 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import * as styles from './Logo.module.css';
+import {
+  highlighted,
+  inverse as inverseClassName,
+  logo,
+} from './Logo.module.css';
 
 interface LogoProps {
   inverse?: boolean;
@@ -9,8 +13,8 @@ interface LogoProps {
 
 export default function Logo({ inverse = false }: LogoProps) {
   return (
-    <span className={classNames(styles.logo, inverse && styles.inverse)}>
-      <span className={styles.highlighted}>Mark</span>
+    <span className={classNames(logo, inverse && inverseClassName)}>
+      <span className={highlighted}>Mark</span>
       Avenue
     </span>
   );

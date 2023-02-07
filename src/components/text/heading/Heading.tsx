@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import classNames from 'classnames';
 
-import * as styles from './Heading.module.css';
+import { heading, normal, yellow } from './Heading.module.css';
 
 interface HeadingProps extends PropsWithChildren {
   className?: string;
@@ -16,11 +16,10 @@ export default function Heading({
   return (
     <h1
       className={classNames(
-        styles.heading,
+        heading,
         className,
-        variant === 'yellow' && styles.yellow,
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        variant === 'normal' && styles.normal,
+        variant === 'yellow' && yellow,
+        variant === 'normal' && normal,
       )}
     >
       {children}

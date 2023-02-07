@@ -4,7 +4,13 @@ import { Link } from 'gatsby';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import Logo from '../logo/Logo';
 
-import * as styles from './Common.module.css';
+import {
+  header,
+  headerLink,
+  logoLink,
+  nav,
+  transparent as transparentClassName,
+} from './Common.module.css';
 
 export interface HeaderProps {
   transparent?: boolean;
@@ -31,15 +37,13 @@ const NAVIGATION_ITEMS = [
 
 export default function Header({ transparent = false }: HeaderProps) {
   return (
-    <header
-      className={classNames(styles.header, transparent && styles.transparent)}
-    >
-      <Link to="/" className={styles.logoLink}>
+    <header className={classNames(header, transparent && transparentClassName)}>
+      <Link to="/" className={logoLink}>
         <Logo inverse={transparent} />
       </Link>
-      <nav className={styles.nav}>
+      <nav className={nav}>
         {NAVIGATION_ITEMS.map(({ to, label }) => (
-          <AnchorLink key={to} to={to} className={styles.headerLink} stripHash>
+          <AnchorLink key={to} to={to} className={headerLink} stripHash>
             {label}
           </AnchorLink>
         ))}

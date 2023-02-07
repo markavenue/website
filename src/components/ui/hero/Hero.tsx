@@ -3,8 +3,13 @@ import classNames from 'classnames';
 import Heading from '../../text/heading/Heading';
 import Paragraph from '../../text/paragraph/Paragraph';
 import Link from '../link/Link';
-
-import * as styles from './Hero.module.css';
+import {
+  hero,
+  rtl as rtlClassName,
+  icon as iconClassName,
+  content,
+  paragraph,
+} from './Hero.module.css';
 
 interface HeroProps {
   linkTo: string;
@@ -22,15 +27,15 @@ export default function Hero({
   rtl = false,
 }: HeroProps) {
   return (
-    <div className={classNames(styles.hero, rtl && styles.rtl)}>
-      <div className={styles.icon}>
+    <div className={classNames(hero, rtl && rtlClassName)}>
+      <div className={iconClassName}>
         <Link to={linkTo} variant="image">
           {icon}
         </Link>
       </div>
-      <div className={styles.content}>
+      <div className={content}>
         <Heading>{headline}</Heading>
-        <Paragraph className={styles.paragraph}>{description}</Paragraph>
+        <Paragraph className={paragraph}>{description}</Paragraph>
         <Link to={linkTo}>Viac o projekte</Link>
       </div>
     </div>

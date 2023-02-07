@@ -1,11 +1,10 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-
-import * as styles from './Partners.module.css';
+import { partners } from './Partners.module.css';
 
 export default function Partners() {
   return (
-    <div className={styles.partners}>
+    <div className={partners}>
       <StaticImage
         alt="Vienna Supreme Concerts"
         src="../../../assets/vienna-supreme-concerts.png"

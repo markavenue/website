@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import classNames from 'classnames';
 
-import * as styles from './Layout.module.css';
+import { container, rtl as rtlClassName } from './Layout.module.css';
 
 interface ContainerProps extends PropsWithChildren {
   rtl?: boolean;
@@ -9,8 +9,6 @@ interface ContainerProps extends PropsWithChildren {
 
 export default function Container({ rtl = false, children }: ContainerProps) {
   return (
-    <div className={classNames(styles.container, rtl && styles.rtl)}>
-      {children}
-    </div>
+    <div className={classNames(container, rtl && rtlClassName)}>{children}</div>
   );
 }
