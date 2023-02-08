@@ -1,5 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+
 import { partners } from './Partners.module.css';
 
 export default function Partners() {

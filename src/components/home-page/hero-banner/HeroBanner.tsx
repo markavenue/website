@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
-import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
 import Header from '../../ui/header/Header';
+import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
 import ServicesTabs from '../services-tabs/ServicesTabs';
 
 import {

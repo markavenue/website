@@ -2,12 +2,12 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Article from '../text/article/Article';
 import Blockquote from '../text/article/Blockquote';
+import CenterBox from '../ui/layout/CenterBox';
+import Container from '../ui/layout/Container';
 import Description from '../text/article/Description';
 import H1 from '../text/article/H1';
 import H2 from '../text/article/H2';
 import Paragraph from '../text/article/Paragraph';
-import CenterBox from '../ui/layout/CenterBox';
-import Container from '../ui/layout/Container';
 import Row from '../ui/layout/Row';
 
 import { frangoIcon, grid } from './Common.module.css';

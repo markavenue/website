@@ -1,13 +1,13 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { SwiperSlide } from 'swiper/react';
+import Article from '../text/article/Article';
+import Container from '../ui/layout/Container';
+import Description from '../text/article/Description';
 import HateFreeVideo1 from '../../assets/hate-free-video-1.mp4';
 import HateFreeVideo2 from '../../assets/hate-free-video-2.mp4';
-import Article from '../text/article/Article';
-import Description from '../text/article/Description';
-import Paragraph from '../text/article/Paragraph';
-import Container from '../ui/layout/Container';
 import MainSwiper from '../ui/swiper/MainSwiper';
+import Paragraph from '../text/article/Paragraph';
 import ThumbSwiper from '../ui/swiper/ThumbSwiper';
 import useSwiper from '../ui/swiper/use-swiper';
 import Video from '../ui/video/Video';

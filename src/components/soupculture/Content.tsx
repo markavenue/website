@@ -1,9 +1,9 @@
 import React from 'react';
 import Article from '../text/article/Article';
+import Container from '../ui/layout/Container';
 import Description from '../text/article/Description';
 import H1 from '../text/article/H1';
 import Paragraph from '../text/article/Paragraph';
-import Container from '../ui/layout/Container';
 import Swiper from './Swiper';
 
 import { video } from './Common.module.css';

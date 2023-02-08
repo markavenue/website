@@ -1,8 +1,8 @@
 import React from 'react';
-import PageTitle from '../components/page-title/PageTitle';
 import Content from '../components/soupculture/Content';
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
+import PageTitle from '../components/page-title/PageTitle';
 
 function SoupculturePage() {
   return (

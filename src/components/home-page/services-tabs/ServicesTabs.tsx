@@ -4,6 +4,7 @@ import TabsContent from '../../ui/tabs/TabsContent';
 import TabsList from '../../ui/tabs/TabsList';
 import TabsRoot from '../../ui/tabs/TabsRoot';
 import TabsTrigger from '../../ui/tabs/TabsTrigger';
+
 import {
   content as contentClassName,
   list,

@@ -1,16 +1,16 @@
 import React from 'react';
 import ApartmeaIcon from '../assets/apartmea-icon.svg';
+import Footer from '../components/ui/footer/Footer';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
-import QuestBarIcon from '../assets/quest-bar-icon.svg';
-import SoupCultureIcon from '../assets/soup-culture-icon.svg';
+import Hero from '../components/ui/hero/Hero';
 import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
 import OurTeam from '../components/home-page/our-team/OurTeam';
-import Partners from '../components/home-page/partners/Partners';
 import PageTitle from '../components/page-title/PageTitle';
-import Footer from '../components/ui/footer/Footer';
-import Hero from '../components/ui/hero/Hero';
+import Partners from '../components/home-page/partners/Partners';
+import QuestBarIcon from '../assets/quest-bar-icon.svg';
 import Section from '../components/ui/section/Section';
+import SoupCultureIcon from '../assets/soup-culture-icon.svg';
 import {
   APARTMEA_PAGE,
   FRANGO_PAGE,

@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react';
-import FacebookIcon from '../../../assets/facebook.svg';
-import InstagramIcon from '../../../assets/instagram.svg';
-import LinkedInIcon from '../../../assets/linked-in.svg';
 import Heading from '../../text/heading/Heading';
-import Section from '../section/Section';
+import FacebookIcon from '../../../assets/facebook.svg';
 import FooterIconLink from './FooterIconLink';
 import FooterLink from './FooterLink';
+import InstagramIcon from '../../../assets/instagram.svg';
+import LinkedInIcon from '../../../assets/linked-in.svg';
+import Section from '../section/Section';
 
 import { primaryRow, secondaryRow, socials } from './Common.module.css';
 

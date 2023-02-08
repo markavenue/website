@@ -1,8 +1,9 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import Heading from '../../text/heading/Heading';
-import Paragraph from '../../text/paragraph/Paragraph';
 import Link from '../link/Link';
+import Paragraph from '../../text/paragraph/Paragraph';
+
 import {
   hero,
   rtl as rtlClassName,
