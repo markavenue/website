@@ -1,8 +1,10 @@
 import type { GatsbyConfig } from 'gatsby';
 
+const title = 'Mark Avenue';
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: 'Mark Avenue',
+    title,
     siteUrl: 'https://www.markavenue.sk',
   },
   // More easily incorporate content into your pages through automatic
@@ -11,6 +13,18 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: false,
   plugins: [
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: title,
+        short_name: title,
+        start_url: '/',
+        background_color: '#faf5e8',
+        theme_color: '#e6433f',
+        display: 'standalone',
+        icon: 'src/assets/favicon.svg',
+      },
+    },
     {
       resolve: 'gatsby-plugin-eslint',
       options: {
