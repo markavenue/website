@@ -24,13 +24,13 @@ export default forwardRef<HTMLElement>((_, ref) => (
     <Section variant="dark" className={secondaryRow}>
       <div>Mark Avenue 2022</div>
       <div className={socials}>
-        <FooterIconLink href="#TODO">
+        <FooterIconLink href="https://www.facebook.com/markavenueagency">
           <FacebookIcon />
         </FooterIconLink>
-        <FooterIconLink href="#TODO">
+        <FooterIconLink href="https://www.linkedin.com/company/mark-avenue">
           <InstagramIcon />
         </FooterIconLink>
-        <FooterIconLink href="#TODO">
+        <FooterIconLink href="https://www.instagram.com/markavenueagency/">
           <LinkedInIcon />
         </FooterIconLink>
       </div>
