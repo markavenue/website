@@ -26,6 +26,8 @@ jobs:
             ${{ runner.os }}-node-
       - name: Install dependencies
         run: npm ci
+      # Having the Build step before the Lint step is intentional because we
+      # must generate `*.css.d.ts` files first
       - name: Build
         run: npm run build
       - name: Lint
