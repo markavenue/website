@@ -1,14 +1,11 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Swiper as SwiperCore, SwiperSlide } from 'swiper/react';
+import MainSwiper from '../ui/swiper/MainSwiper';
 
-interface SwiperProps {
-  className?: string;
-}
-
-export default function Swiper({ className }: SwiperProps) {
+export default function Swiper() {
   return (
-    <SwiperCore className={className}>
+    <MainSwiper>
       <SwiperSlide>
         <StaticImage src="../../assets/soupculture-1.png" alt="" />
       </SwiperSlide>
@@ -27,6 +24,6 @@ export default function Swiper({ className }: SwiperProps) {
       <SwiperSlide>
         <StaticImage src="../../assets/soupculture-6.png" alt="" />
       </SwiperSlide>
-    </SwiperCore>
+    </MainSwiper>
   );
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Swiper as SwiperCore, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
+import MainSwiper from '../ui/swiper/MainSwiper';
 
 export default function Swiper() {
   return (
-    <SwiperCore>
+    <MainSwiper>
       <SwiperSlide>
         <StaticImage src="../../assets/quest-bar-1.jpeg" alt="" />
       </SwiperSlide>
@@ -62,6 +63,6 @@ export default function Swiper() {
       <SwiperSlide>
         <StaticImage src="../../assets/quest-bar-19.jpeg" alt="" />
       </SwiperSlide>
-    </SwiperCore>
+    </MainSwiper>
   );
 }
