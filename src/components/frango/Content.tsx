@@ -21,9 +21,9 @@ export default function Content() {
           <H1>O projekte</H1>
           <Paragraph>
             Frango je slovenská sieť reštaurácií rýchleho občerstvenia, ktorá sa
-            Špecializuje na chutné a šťavnaté jedlá z kuracieho mäska. Vďaka
-            Spolupráci s nami získali úplne novú, originálnu vizuálnu identitu,
-            Ktorou táto sieť púta pozornosť ľudí vo foodcourte na nivách.
+            špecializuje na chutné a šťavnaté jedlá z kuracieho mäska. Vďaka
+            spolupráci s nami získali úplne novú, originálnu vizuálnu identitu,
+            ktorou táto sieť púta pozornosť ľudí vo foodcourte na nivách.
           </Paragraph>
           <dl>
             <Description title="Klient:">Frango</Description>
@@ -39,10 +39,9 @@ export default function Content() {
         <Article>
           <H2>Frango kedysi</H2>
           <Paragraph>
-            Prevádzka nemala vytvorený koncept značky. Značka nemala stanovenú
-            primárnu cieľovú skupinu. Značka nemá stanovený komunikačný ani
-            vizuálny štýl. Prevádzka pôsobí staromódne a zaostalo. Zanedbaná
-            marketingová komunikácia.
+            Prevádzka nemala zadefinované základné parametre vlastnej značky.
+            Značka nemala stanovený komunikačný ani vizuálny štýl. Prevádzka
+            pôsobila staromódne a zaostalo.
           </Paragraph>
         </Article>
       </Container>

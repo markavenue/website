@@ -17,13 +17,13 @@ export default function Content() {
           <H1>O projekte</H1>
           <Paragraph>
             Koncept polievky v poháriku alebo bezodpadový street food
-            Soupculture prišiel do bratislavy pred dvoma rokmi. Pri ich
-            začiatkoch Sme stáli aj my. Podieľali sme sa nielen na tvorbe ich
-            prvých príspevkov Na sociálnych sieťach, ale vytvorili sme aj
-            úspešnú reklamnú kampaň a Vďaka nej soupculture spoznalo množstvo
-            ľudí z cieľovej skupiny. Taktiež Sme zapojili známych influencerov,
-            vymysleli súťaž čI navrhli dizajn Vernostným kartičkám. Dnes sa
-            tešíme veľkej obľube a popularite tejto Polievkovej kultúry.
+            Soupculture prišiel do Bratislavy pred dvoma rokmi. Pri ich
+            začiatkoch sme stáli aj my. Vytvorili sme úspešnú reklamnú kampaň,
+            vďaka ktorej sa značka Soupculture dostala medzi relevantnú cieľovú
+            skupinu. Taktiež sme zapojili do kampane známych influencerov,
+            vytvorili sme niekoľko súťaží a navrhli dizajn vernostným kartičkám.
+            Dnes sa spolu so Soupculture tešíme veľkej obľube tejto novej
+            polievkovej kultúry.
           </Paragraph>
           <dl>
             <Description title="Klient:">Soupculture</Description>
