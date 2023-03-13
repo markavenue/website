@@ -1,3 +1,32 @@
+.root {
+  position: relative;
+}
+
+.controlButton {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  border: 0;
+  cursor: pointer;
+  margin: auto;
+  height: 80px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
 .thumbs {
   max-width: 450px;
   margin-bottom: var(--gap);

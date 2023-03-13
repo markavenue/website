@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Swiper as SwiperCore, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import MainSwiper from '../ui/swiper/MainSwiper';
 
 export default function Swiper() {
