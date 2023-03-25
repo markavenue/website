@@ -16,6 +16,7 @@
 }
 
 .row {
+  padding: 0 16px;
   margin: 48px 0;
   text-align: left;
   gap: 16px;
