@@ -15,7 +15,7 @@ export default function Logo({ inverse = false }: LogoProps) {
   return (
     <span className={classNames(logo, inverse && inverseClassName)}>
       <span className={highlighted}>Mark</span>
-      Avenue
+      &nbsp;Avenue
     </span>
   );
 }

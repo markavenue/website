@@ -31,7 +31,7 @@ export default function HeroBanner() {
             Marketing
             <br />
             for
-            <span className={accent}>better</span>
+            <span className={accent}>&nbsp;better</span>
             <br />
             <span className={accent}>tomorrow</span>
           </h1>
