@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
 import Header from '../../ui/header/Header';
 import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
@@ -41,9 +42,9 @@ export default function HeroBanner() {
             a vyvíjame brand.
           </span>
           <div className={arrow}>
-            <button type="button" className={arrowLink}>
+            <AnchorLink to="/#services" className={arrowLink}>
               <ArrowDownIcon />
-            </button>
+            </AnchorLink>
           </div>
           <div id="services" />
           <ServicesTabs />
