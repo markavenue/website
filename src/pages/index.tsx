@@ -18,10 +18,14 @@ import {
   QUEST_BAR_PAGE,
   SOUPCULTURE_PAGE,
 } from '../const/routes';
+import LinkToTopAnchor from '../components/ui/link-to-top/LinkToTopAnchor';
+import LinkToTop from '../components/ui/link-to-top/LinkToTop';
 
 function IndexPage() {
   return (
     <main>
+      <LinkToTopAnchor />
+      <LinkToTop />
       <HeroBanner />
       <div id="portfolio" />
       <Section withSpacing>
