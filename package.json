@@ -16,11 +16,17 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "gatsby": "^5.5.0",
-    "gatsby-plugin-postcss": "^6.2.0",
+    "@radix-ui/react-tabs": "^1.0.1",
+    "classnames": "^2.3.2",
+    "gatsby": "^5.8.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
+    "gatsby-plugin-image": "^3.8.0",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.4.18",
     "react": "^18.2.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "swiper": "^9.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",
@@ -35,7 +41,15 @@
     "eslint-plugin-rulesdir": "0.2.1",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-webpack-plugin": "^4.0.0",
+    "gatsby-omni-font-loader": "^2.0.2",
+    "gatsby-plugin-dts-css-modules": "^3.0.0",
     "gatsby-plugin-eslint": "^4.0.3",
+    "gatsby-plugin-manifest": "^5.8.0",
+    "gatsby-plugin-postcss": "^6.2.0",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sharp": "^5.8.0",
+    "gatsby-source-filesystem": "^5.8.0",
+    "postcss": "^8.4.21",
     "typescript": "^5.0.2"
   },
   "engines": {

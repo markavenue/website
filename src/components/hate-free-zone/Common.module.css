@@ -1,0 +1,22 @@
+.video {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  flex-direction: row-reverse;
+}
+
+@media screen and (min-width: 1025px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: right;
+  }
+  .grid > *:last-child {
+    order: -1;
+  }
+}

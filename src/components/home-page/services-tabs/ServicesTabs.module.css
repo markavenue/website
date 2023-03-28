@@ -1,0 +1,22 @@
+.root {
+  display: flex;
+  max-width: 980px;
+  margin: 24px auto;
+  padding: 24px 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listLarge {
+  margin: 36px 0;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+}
+
+.content ul {
+  line-height: 1.8;
+}

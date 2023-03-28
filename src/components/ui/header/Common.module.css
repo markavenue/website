@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  flex-direction: column;
+  border-bottom: 1px dashed #e5dfcf;
+}
+.logoLink {
+  text-decoration: none;
+}
+.headerLink {
+  font-family: var(--mono);
+  color: #302a27;
+  text-decoration: none;
+  padding: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.header.transparent .headerLink {
+  color: #fff;
+}
+.header.transparent {
+  border-bottom: none;
+}
+.header .headerLink:hover {
+  color: var(--primary);
+}
+.nav {
+  padding: 0;
+  margin: 8px 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+  }
+  .headerLink {
+    padding: 8px 16px;
+  }
+}
