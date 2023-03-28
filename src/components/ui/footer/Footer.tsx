@@ -18,7 +18,9 @@ export default forwardRef<HTMLElement>((_, ref) => (
       </div>
       <div>
         <Heading variant="yellow">Napíšte</Heading>
-        <FooterLink href="mailto:info@markavenue.sk">info@markavenue.sk</FooterLink>
+        <FooterLink href="mailto:info@markavenue.sk">
+          info@markavenue.sk
+        </FooterLink>
       </div>
     </Section>
     <Section variant="dark" className={secondaryRow}>
