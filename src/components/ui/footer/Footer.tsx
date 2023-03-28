@@ -18,7 +18,7 @@ export default forwardRef<HTMLElement>((_, ref) => (
       </div>
       <div>
         <Heading variant="yellow">Napíšte</Heading>
-        <FooterLink href="mailto:info@marksoup.sk">info@marksoup.sk</FooterLink>
+        <FooterLink href="mailto:info@markavenue.sk">info@markavenue.sk</FooterLink>
       </div>
     </Section>
     <Section variant="dark" className={secondaryRow}>
@@ -27,10 +27,10 @@ export default forwardRef<HTMLElement>((_, ref) => (
         <FooterIconLink href="https://www.facebook.com/markavenueagency">
           <FacebookIcon />
         </FooterIconLink>
-        <FooterIconLink href="https://www.linkedin.com/company/mark-avenue">
+        <FooterIconLink href="https://www.instagram.com/markavenueagency/">
           <InstagramIcon />
         </FooterIconLink>
-        <FooterIconLink href="https://www.instagram.com/markavenueagency/">
+        <FooterIconLink href="https://www.linkedin.com/company/mark-avenue/">
           <LinkedInIcon />
         </FooterIconLink>
       </div>
