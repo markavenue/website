@@ -19,13 +19,14 @@ rulesDirPlugin.RULES_DIR = path.resolve(
   ),
 );
 
-const commonPresets = [
+const commonPresetsInitial = [
   'react-app',
   'airbnb',
   'airbnb/hooks',
   'plugin:sonarjs/recommended',
-  'plugin:prettier/recommended',
 ];
+
+const commonPresetsFinal = ['plugin:prettier/recommended'];
 
 const commonRules = {
   ...baseConfig.rules,
@@ -38,7 +39,7 @@ const commonRules = {
 module.exports = {
   ...baseConfig,
   plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs'],
-  extends: commonPresets,
+  extends: [...commonPresetsInitial, ...commonPresetsFinal],
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
   parser: undefined,
@@ -50,10 +51,11 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
-        ...commonPresets,
+        ...commonPresetsInitial,
         'airbnb-typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        ...commonPresetsFinal,
       ],
       parserOptions: {
         project: './tsconfig.json',
