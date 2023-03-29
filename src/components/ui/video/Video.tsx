@@ -2,13 +2,11 @@ import React, { ComponentProps } from 'react';
 
 interface VideoProps
   extends Pick<ComponentProps<'source'>, 'src'>,
-  Pick<ComponentProps<'video'>, 'width' | 'height'> {
+    Pick<ComponentProps<'video'>, 'width' | 'height'> {
   className?: string;
 }
 
-export default function Video({
-  src, width, height, className,
-}: VideoProps) {
+export default function Video({ src, width, height, className }: VideoProps) {
   return (
     // eslint-disable-next-line jsx-a11y/media-has-caption
     <video

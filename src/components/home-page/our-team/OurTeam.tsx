@@ -4,12 +4,7 @@ import Heading from '../../text/heading/Heading';
 import Paragraph from '../../text/paragraph/Paragraph';
 import Section from '../../ui/section/Section';
 
-import {
-  image,
-  ourTeam,
-  paragraph,
-  row,
-} from './OurTeam.module.css';
+import { image, ourTeam, paragraph, row } from './OurTeam.module.css';
 
 export default React.forwardRef<HTMLDivElement>((_, ref) => (
   <Section ref={ref} variant="dark" className={ourTeam}>
