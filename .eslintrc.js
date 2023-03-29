@@ -33,20 +33,11 @@ const commonRules = {
     Object.keys(rules).map((key) => [`rulesdir/${key}`, rules[key]]),
   ),
   'max-len': ['error', 80, { ignoreUrls: true }],
-  'arrow-body-style': 'error',
-  'prefer-arrow/prefer-arrow-functions': 'error',
-  'react/function-component-definition': [
-    'error',
-    {
-      namedComponents: 'arrow-function',
-      unnamedComponents: 'arrow-function',
-    },
-  ],
 };
 
 module.exports = {
   ...baseConfig,
-  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs', 'prefer-arrow'],
+  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs'],
   extends: commonPresets,
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
@@ -70,7 +61,6 @@ module.exports = {
       rules: {
         ...commonRules,
         'react/require-default-props': 'off',
-        'react/prop-types': 'off',
       },
     },
   ],
