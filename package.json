@@ -54,7 +54,7 @@
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-source-filesystem": "^5.8.0",
     "postcss": "^8.4.21",
-    "prettier": "2.7.1",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.2"
   },
   "overrides": {

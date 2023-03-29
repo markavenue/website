@@ -2,4 +2,4 @@
 
 Powered by [Gatsby].
 
-[gatsby]: https://www.gatsbyjs.com/
+[Gatsby]: https://www.gatsbyjs.com/
