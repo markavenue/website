@@ -14,9 +14,7 @@ interface SectionProps extends PropsWithChildren {
 }
 
 export default forwardRef<HTMLDivElement, SectionProps>(
-  ({
-    children, variant = 'normal', className, withSpacing = false,
-  }, ref) => {
+  ({ children, variant = 'normal', className, withSpacing = false }, ref) => {
     const section = (
       <section
         ref={ref}

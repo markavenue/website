@@ -8,38 +8,38 @@ const rulesDirPlugin = require('eslint-plugin-rulesdir');
 
 const { baseConfig } = eslintConfig(false);
 
-rulesDirPlugin.RULES_DIR = path.resolve(path.join(
-  __dirname,
-  'node_modules',
-  'gatsby',
-  'dist',
-  'utils',
-  'eslint-rules',
-));
+rulesDirPlugin.RULES_DIR = path.resolve(
+  path.join(
+    __dirname,
+    'node_modules',
+    'gatsby',
+    'dist',
+    'utils',
+    'eslint-rules',
+  ),
+);
 
-const commonPresets = [
+const commonPresetsInitial = [
   'react-app',
   'airbnb',
   'airbnb/hooks',
   'plugin:sonarjs/recommended',
 ];
 
+const commonPresetsFinal = ['plugin:prettier/recommended'];
+
 const commonRules = {
   ...baseConfig.rules,
-  ...Object.fromEntries(Object.keys(rules).map(
-    (key) => [`rulesdir/${key}`, rules[key]],
-  )),
+  ...Object.fromEntries(
+    Object.keys(rules).map((key) => [`rulesdir/${key}`, rules[key]]),
+  ),
   'max-len': ['error', 80, { ignoreUrls: true }],
 };
 
 module.exports = {
   ...baseConfig,
-  plugins: [
-    ...baseConfig.plugins,
-    'rulesdir',
-    'sonarjs',
-  ],
-  extends: commonPresets,
+  plugins: [...baseConfig.plugins, 'rulesdir', 'sonarjs'],
+  extends: [...commonPresetsInitial, ...commonPresetsFinal],
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
   parser: undefined,
@@ -51,10 +51,11 @@ module.exports = {
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
-        ...commonPresets,
+        ...commonPresetsInitial,
         'airbnb-typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        ...commonPresetsFinal,
       ],
       parserOptions: {
         project: './tsconfig.json',

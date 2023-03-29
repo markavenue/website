@@ -13,7 +13,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@radix-ui/react-tabs": "^1.0.1",
@@ -37,7 +38,9 @@
     "eslint": "^8.28.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-rulesdir": "0.2.1",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-webpack-plugin": "^4.0.0",
@@ -50,6 +53,7 @@
     "gatsby-plugin-sharp": "^5.8.0",
     "gatsby-source-filesystem": "^5.8.0",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
     "typescript": "^5.0.2"
   },
   "overrides": {

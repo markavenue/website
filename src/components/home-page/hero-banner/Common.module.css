@@ -4,7 +4,7 @@
 }
 
 .video {
-  background: #302A26;
+  background: #302a26;
   position: absolute;
   z-index: 0;
   object-fit: cover;
@@ -16,8 +16,8 @@
 }
 
 .overlay {
-  background-color: #302A26;
-  opacity: .9;
+  background-color: #302a26;
+  opacity: 0.9;
   position: absolute;
   top: 0;
   bottom: 0;
