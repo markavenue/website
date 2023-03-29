@@ -19,14 +19,8 @@ rulesDirPlugin.RULES_DIR = path.resolve(
   ),
 );
 
-const presetIndex = baseConfig.extends.indexOf(
-  require.resolve('gatsby/dist/utils/eslint/required'),
-);
-
 const commonPresets = [
-  // Local rules have to be prefixed with `rulesdir/`. Let's remove the preset
-  // and load the rules in `rules` instead.
-  ...baseConfig.extends.filter((value, index) => index !== presetIndex),
+  'react-app',
   'airbnb',
   'airbnb/hooks',
   'plugin:sonarjs/recommended',
@@ -57,6 +51,7 @@ module.exports = {
   // Don't use babel-preset-gatsby, which requires build. Gatsby-related files
   // are in TypeScript anyway.
   parser: undefined,
+  parserOptions: undefined,
   rules: {
     ...commonRules,
   },

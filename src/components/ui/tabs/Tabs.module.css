@@ -1,0 +1,19 @@
+.trigger {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 16px 24px;
+  font-family: var(--mono);
+}
+
+.trigger[data-state='active'] {
+  background: #e7c231;
+  color: #292929;
+}
+
+.content {
+  background: #d7b431;
+  color: #292929;
+  text-align: left;
+  padding: 24px 48px;
+}

@@ -1,0 +1,14 @@
+.logo {
+  font-family: var(--sans-serif);
+  color: #302a27;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.highlighted {
+  color: var(--primary);
+}
+
+.logo.inverse {
+  color: #fff;
+}

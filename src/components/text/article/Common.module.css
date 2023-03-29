@@ -1,0 +1,79 @@
+.h1,
+.h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: var(--normal);
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+.h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: var(--mono);
+}
+
+.h2 {
+  text-align: center;
+  font-size: 80px;
+  font-family: var(--sans-serif);
+}
+
+.paragraph {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: var(--mono);
+  margin-bottom: var(--gutter);
+}
+
+.description {
+  font-size: 16px;
+  font-family: var(--mono);
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.description > dt {
+  font-weight: 600;
+  float: left;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+.description > dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.article {
+  max-width: 600px;
+  margin-top: 16px;
+  margin-bottom: var(--gutter);
+}
+
+.blockquote {
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  font-family: var(--mono);
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+
+@media screen and (min-width: 1025px) {
+  .h1,
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}

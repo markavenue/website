@@ -1,0 +1,21 @@
+.frangoIcon {
+  max-height: 350px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+.grid > * {
+  max-height: 140px;
+}
+
+@media screen and (min-width: 1025px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

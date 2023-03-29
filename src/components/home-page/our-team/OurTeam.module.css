@@ -1,0 +1,41 @@
+.ourTeam {
+  color: #fff;
+  font-family: var(--mono);
+  text-align: center;
+  padding: 48px 0;
+}
+
+.paragraph {
+  color: #fff;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.image {
+  margin: 0 0 16px;
+}
+
+.row {
+  padding: 0 16px;
+  margin: 48px 0;
+  text-align: left;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row p {
+  margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .row {
+    flex-direction: row;
+  }
+  .row > * {
+    flex: 1;
+  }
+  .heading {
+    font-size: 80px;
+  }
+}
