@@ -21,3 +21,9 @@
   X-Frame-Options: DENY
   X-Permitted-Cross-Domain-Policies: none
   X-XSS-Protection: 0
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
