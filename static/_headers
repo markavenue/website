@@ -8,8 +8,12 @@
 # They were tested with:
 # - https://securityheaders.com/?q=<branch>.markavenue.pages.dev&hide=on&followRedirects=on
 
+# Caching headers are configured according to
+# https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/caching/.
+
 /*
   ! Access-Control-Allow-Origin
+  Cache-Control: public, max-age=0, must-revalidate
   Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content; font-src fonts.gstatic.com data:; form-action 'none'; frame-src https://www.youtube.com/; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
@@ -21,6 +25,22 @@
   X-Frame-Options: DENY
   X-Permitted-Cross-Domain-Policies: none
   X-XSS-Protection: 0
+
+/:base.css
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/:base.js
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/sw.js
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
 
 https://:project.pages.dev/*
   X-Robots-Tag: noindex, nofollow
