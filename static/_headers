@@ -1,0 +1,49 @@
+# Security headers are configured mostly in accordance with:
+# - https://owasp.org/www-project-secure-headers/
+# - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+#
+# gatsby-plugin-csp is not used due to incompatibilities with Gatsby 5 and the
+# way gatsby-plugin-image works, both of which force us to use 'unsafe-inline'.
+#
+# They were tested with:
+# - https://securityheaders.com/?q=<branch>.markavenue.pages.dev&hide=on&followRedirects=on
+
+# Caching headers are configured according to
+# https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/caching/.
+
+/*
+  ! Access-Control-Allow-Origin
+  Cache-Control: public, max-age=0, must-revalidate
+  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content; font-src fonts.gstatic.com data:; form-action 'none'; frame-src https://www.youtube.com/; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),screen-wake-lock=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),web-share=(),xr-spatial-tracking=()
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000 ; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-Permitted-Cross-Domain-Policies: none
+  X-XSS-Protection: 0
+
+/:base.css
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/:base.js
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/static/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/sw.js
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
