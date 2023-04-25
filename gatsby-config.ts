@@ -73,6 +73,14 @@ const config: GatsbyConfig = {
         duration: 200,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'GTM-TTF3894',
+        // Uncomment if necessary during the developement.
+        // includeInDevelopment: true,
+      },
+    },
   ],
 };
 
