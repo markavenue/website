@@ -1,6 +1,7 @@
 # Security headers are configured mostly in accordance with:
 # - https://owasp.org/www-project-secure-headers/
 # - https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html
+# - https://developers.google.com/tag-platform/tag-manager/web/csp#enable_the_container_tag_to_use_csp
 #
 # gatsby-plugin-csp is not used due to incompatibilities with Gatsby 5 and the
 # way gatsby-plugin-image works, both of which force us to use 'unsafe-inline'.
@@ -14,7 +15,7 @@
 /*
   ! Access-Control-Allow-Origin
   Cache-Control: public, max-age=0, must-revalidate
-  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content; font-src fonts.gstatic.com data:; form-action 'none'; frame-src https://www.googletagmanager.com https://www.youtube.com/; img-src 'self' data:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' fonts.googleapis.com 'unsafe-inline'
+  Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests; block-all-mixed-content; font-src fonts.gstatic.com data:; form-action 'none'; frame-src https://www.googletagmanager.com https://www.youtube.com/; img-src 'self' data: https://www.googletagmanager.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' fonts.googleapis.com 'unsafe-inline'
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
   Permissions-Policy: accelerometer=(),autoplay=(),camera=(),display-capture=(),document-domain=(),encrypted-media=(),fullscreen=(),gamepad=(),geolocation=(),gyroscope=(),layout-animations=(self),legacy-image-formats=(self),magnetometer=(),microphone=(),midi=(),oversized-images=(self),payment=(),picture-in-picture=(),publickey-credentials-get=(),speaker-selection=(),screen-wake-lock=(),sync-xhr=(self),unoptimized-images=(self),unsized-media=(self),usb=(),web-share=(),xr-spatial-tracking=()
