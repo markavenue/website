@@ -14,6 +14,7 @@ interface SiteData {
   site: {
     siteMetadata: {
       title: string;
+      year: number;
     };
   };
 }
@@ -24,6 +25,7 @@ export default forwardRef<HTMLElement>((_, ref) => {
       site {
         siteMetadata {
           title
+          year
         }
       }
     }
@@ -44,7 +46,9 @@ export default forwardRef<HTMLElement>((_, ref) => {
         </div>
       </Section>
       <Section variant="dark" className={secondaryRow}>
-        <div>{data.site.siteMetadata.title} 2022</div>
+        <div>
+          {data.site.siteMetadata.title} {data.site.siteMetadata.year}
+        </div>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
             <FacebookIcon />

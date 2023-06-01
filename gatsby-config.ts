@@ -6,6 +6,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title,
     siteUrl: 'https://www.markavenue.sk',
+    year: new Date().getFullYear(),
   },
   // More easily incorporate content into your pages through automatic
   // TypeScript type generation and better GraphQL IntelliSense.
