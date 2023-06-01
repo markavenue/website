@@ -22,7 +22,7 @@ export default function PageTitle({ children }: PropsWithChildren) {
 
   return (
     <title>
-      {[data.site.siteMetadata.title, children].filter(Boolean).join(' | ')}
+      {[children, data.site.siteMetadata.title].filter(Boolean).join(' | ')}
     </title>
   );
 }
