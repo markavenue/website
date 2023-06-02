@@ -1,12 +1,8 @@
 import type { GatsbyConfig } from 'gatsby';
 
-const title = 'Mark Avenue';
+import { SITE_TITLE } from './src/const/site-metadata';
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title,
-    siteUrl: 'https://www.markavenue.sk',
-  },
   // More easily incorporate content into your pages through automatic
   // TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -16,8 +12,8 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: title,
-        short_name: title,
+        name: SITE_TITLE,
+        short_name: SITE_TITLE,
         start_url: '/',
         background_color: '#faf5e8',
         theme_color: '#e6433f',

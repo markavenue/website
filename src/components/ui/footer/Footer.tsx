@@ -7,15 +7,13 @@ import FooterLink from './FooterLink';
 import InstagramIcon from '../../../assets/instagram.svg';
 import LinkedInIcon from '../../../assets/linked-in.svg';
 import Section from '../section/Section';
+import { SITE_TITLE } from '../../../const/site-metadata';
 
 import { primaryRow, secondaryRow, socials } from './Common.module.css';
 
 interface SiteData {
   site: {
     buildTime: string;
-    siteMetadata: {
-      title: string;
-    };
   };
 }
 
@@ -24,9 +22,6 @@ export default forwardRef<HTMLElement>((_, ref) => {
     query {
       site {
         buildTime(formatString: "YYYY")
-        siteMetadata {
-          title
-        }
       }
     }
   `);
@@ -47,7 +42,7 @@ export default forwardRef<HTMLElement>((_, ref) => {
       </Section>
       <Section variant="dark" className={secondaryRow}>
         <div>
-          {data.site.siteMetadata.title} {data.site.buildTime}
+          {SITE_TITLE} {data.site.buildTime}
         </div>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
