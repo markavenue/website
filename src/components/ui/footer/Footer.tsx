@@ -7,26 +7,15 @@ import FooterLink from './FooterLink';
 import InstagramIcon from '../../../assets/instagram.svg';
 import LinkedInIcon from '../../../assets/linked-in.svg';
 import Section from '../section/Section';
+import { SITE_TITLE } from '../../../const/site-metadata';
 
 import { primaryRow, secondaryRow, socials } from './Common.module.css';
 
-interface SiteData {
-  site: {
-    siteMetadata: {
-      title: string;
-      year: number;
-    };
-  };
-}
-
 export default forwardRef<HTMLElement>((_, ref) => {
-  const data = useStaticQuery<SiteData>(graphql`
-    query {
+  const data = useStaticQuery<Queries.FooterQuery>(graphql`
+    query Footer {
       site {
-        siteMetadata {
-          title
-          year
-        }
+        buildTime(formatString: "YYYY")
       }
     }
   `);
@@ -47,7 +36,7 @@ export default forwardRef<HTMLElement>((_, ref) => {
       </Section>
       <Section variant="dark" className={secondaryRow}>
         <div>
-          {data.site.siteMetadata.title} {data.site.siteMetadata.year}
+          {SITE_TITLE} {data.site?.buildTime}
         </div>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
