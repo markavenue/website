@@ -11,15 +11,9 @@ import { SITE_TITLE } from '../../../const/site-metadata';
 
 import { primaryRow, secondaryRow, socials } from './Common.module.css';
 
-interface SiteData {
-  site: {
-    buildTime: string;
-  };
-}
-
 export default forwardRef<HTMLElement>((_, ref) => {
-  const data = useStaticQuery<SiteData>(graphql`
-    query {
+  const data = useStaticQuery<Queries.FooterQuery>(graphql`
+    query Footer {
       site {
         buildTime(formatString: "YYYY")
       }
@@ -42,7 +36,7 @@ export default forwardRef<HTMLElement>((_, ref) => {
       </Section>
       <Section variant="dark" className={secondaryRow}>
         <div>
-          {SITE_TITLE} {data.site.buildTime}
+          {SITE_TITLE} {data.site?.buildTime}
         </div>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
