@@ -12,9 +12,9 @@ import { primaryRow, secondaryRow, socials } from './Common.module.css';
 
 interface SiteData {
   site: {
+    buildTime: string;
     siteMetadata: {
       title: string;
-      year: number;
     };
   };
 }
@@ -23,9 +23,9 @@ export default forwardRef<HTMLElement>((_, ref) => {
   const data = useStaticQuery<SiteData>(graphql`
     query {
       site {
+        buildTime(formatString: "YYYY")
         siteMetadata {
           title
-          year
         }
       }
     }
@@ -47,7 +47,7 @@ export default forwardRef<HTMLElement>((_, ref) => {
       </Section>
       <Section variant="dark" className={secondaryRow}>
         <div>
-          {data.site.siteMetadata.title} {data.site.siteMetadata.year}
+          {data.site.siteMetadata.title} {data.site.buildTime}
         </div>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
