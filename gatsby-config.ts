@@ -71,6 +71,15 @@ const config: GatsbyConfig = {
         duration: 200,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: ['G-TFKS1EFWRF'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 };
 
