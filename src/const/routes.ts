@@ -7,3 +7,4 @@ export const SOUPCULTURE_PAGE = '/soupculture';
 export const QUEST_BAR_PAGE = '/quest-bar';
 
 export const COOKIE_POLICY_PAGE = '/cookies';
+export const PRIVACY_POLICY_PAGE = '/sukromie';
