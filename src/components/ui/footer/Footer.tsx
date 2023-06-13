@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { forwardRef } from 'react';
 import Heading from '../../text/heading/Heading';
 import FacebookIcon from '../../../assets/facebook.svg';
@@ -7,9 +7,15 @@ import FooterLink from './FooterLink';
 import InstagramIcon from '../../../assets/instagram.svg';
 import LinkedInIcon from '../../../assets/linked-in.svg';
 import Section from '../section/Section';
+import { COOKIE_POLICY_PAGE } from '../../../const/routes';
 import { SITE_TITLE } from '../../../const/site-metadata';
 
-import { primaryRow, secondaryRow, socials } from './Common.module.css';
+import {
+  footerLink,
+  primaryRow,
+  secondaryRow,
+  socials,
+} from './Common.module.css';
 
 export default forwardRef<HTMLElement>((_, ref) => {
   const data = useStaticQuery<Queries.FooterQuery>(graphql`
@@ -38,6 +44,9 @@ export default forwardRef<HTMLElement>((_, ref) => {
         <div>
           {SITE_TITLE} {data.site?.buildTime}
         </div>
+        <Link className={footerLink} to={COOKIE_POLICY_PAGE}>
+          Cookies
+        </Link>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
             <FacebookIcon />

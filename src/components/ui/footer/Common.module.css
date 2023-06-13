@@ -1,6 +1,7 @@
 .primaryRow {
   text-align: center;
   padding: 230px 0;
+  font-size: 18px;
 }
 
 .secondaryRow {
@@ -16,7 +17,10 @@
   font-family: var(--mono);
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+}
+
+.secondaryRow .footerLink {
+  text-align: center;
 }
 
 .socials {
