@@ -24,6 +24,7 @@
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-dts-css-modules": "^3.0.0",
     "gatsby-plugin-eslint": "^4.0.4",
+    "gatsby-plugin-google-gtag": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-postcss": "^6.10.0",

@@ -1,15 +1,26 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { forwardRef } from 'react';
 import Heading from '../../text/heading/Heading';
 import FacebookIcon from '../../../assets/facebook.svg';
 import FooterIconLink from './FooterIconLink';
-import FooterLink from './FooterLink';
 import InstagramIcon from '../../../assets/instagram.svg';
 import LinkedInIcon from '../../../assets/linked-in.svg';
+import PhoneLink from '../link/PhoneLink';
+import EmailLink from '../link/EmailLink';
 import Section from '../section/Section';
+import {
+  CONTACT_EMAIL_ADDRESS,
+  CONTACT_PHONE_NUMBER,
+} from '../../../const/contact';
+import { COOKIE_POLICY_PAGE, PRIVACY_POLICY_PAGE } from '../../../const/routes';
 import { SITE_TITLE } from '../../../const/site-metadata';
 
-import { primaryRow, secondaryRow, socials } from './Common.module.css';
+import {
+  footerLink,
+  primaryRow,
+  secondaryRow,
+  socials,
+} from './Common.module.css';
 
 export default forwardRef<HTMLElement>((_, ref) => {
   const data = useStaticQuery<Queries.FooterQuery>(graphql`
@@ -25,19 +36,23 @@ export default forwardRef<HTMLElement>((_, ref) => {
       <Section variant="dark" className={primaryRow}>
         <div>
           <Heading variant="yellow">Zavolajte</Heading>
-          <FooterLink href="tel:+421940880930">+421 940 880 930</FooterLink>
+          <PhoneLink className={footerLink} number={CONTACT_PHONE_NUMBER} />
         </div>
         <div>
           <Heading variant="yellow">Napíšte</Heading>
-          <FooterLink href="mailto:info@markavenue.sk">
-            info@markavenue.sk
-          </FooterLink>
+          <EmailLink address={CONTACT_EMAIL_ADDRESS} className={footerLink} />
         </div>
       </Section>
       <Section variant="dark" className={secondaryRow}>
         <div>
           {SITE_TITLE} {data.site?.buildTime}
         </div>
+        <Link className={footerLink} to={COOKIE_POLICY_PAGE}>
+          Cookies
+        </Link>
+        <Link className={footerLink} to={PRIVACY_POLICY_PAGE}>
+          Súkromie
+        </Link>
         <div className={socials}>
           <FooterIconLink href="https://www.facebook.com/markavenueagency">
             <FacebookIcon />
