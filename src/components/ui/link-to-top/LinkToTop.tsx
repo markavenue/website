@@ -6,7 +6,13 @@ import { linkToTop } from './LinkToTop.module.css';
 
 export default function LinkToTop() {
   return (
-    <AnchorLink to={`#${LINK_TO_TOP_ANCHOR}`} className={linkToTop}>
+    <AnchorLink
+      gatsbyLinkProps={{
+        'aria-label': 'Prejdi na vrch',
+      }}
+      to={`#${LINK_TO_TOP_ANCHOR}`}
+      className={linkToTop}
+    >
       <ArrowUpCircle />
     </AnchorLink>
   );

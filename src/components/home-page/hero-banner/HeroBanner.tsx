@@ -42,7 +42,13 @@ export default function HeroBanner() {
             a vyvíjame brand.
           </span>
           <div className={arrow}>
-            <AnchorLink to="/#services" className={arrowLink}>
+            <AnchorLink
+              gatsbyLinkProps={{
+                'aria-label': 'Prejdi na služby',
+              }}
+              to="/#services"
+              className={arrowLink}
+            >
               <ArrowDownIcon />
             </AnchorLink>
           </div>

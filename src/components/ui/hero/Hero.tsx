@@ -30,7 +30,7 @@ export default function Hero({
   return (
     <div className={classNames(hero, rtl && rtlClassName)}>
       <div className={iconClassName}>
-        <Link to={linkTo} variant="image">
+        <Link aria-label={headline} to={linkTo} variant="image">
           {icon}
         </Link>
       </div>

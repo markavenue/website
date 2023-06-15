@@ -5,9 +5,10 @@ import { footerIconLink } from './Common.module.css';
 export default function FooterIconLink({
   href,
   children,
-}: Pick<ComponentProps<'a'>, 'href' | 'children'>) {
+  ...props
+}: Pick<ComponentProps<'a'>, 'aria-label' | 'href' | 'children'>) {
   return (
-    <a href={href} className={footerIconLink}>
+    <a aria-label={props['aria-label']} href={href} className={footerIconLink}>
       {children}
     </a>
   );

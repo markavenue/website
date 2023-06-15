@@ -54,13 +54,22 @@ export default forwardRef<HTMLElement>((_, ref) => {
           Súkromie
         </Link>
         <div className={socials}>
-          <FooterIconLink href="https://www.facebook.com/markavenueagency">
+          <FooterIconLink
+            aria-label="Facebook"
+            href="https://www.facebook.com/markavenueagency"
+          >
             <FacebookIcon />
           </FooterIconLink>
-          <FooterIconLink href="https://www.instagram.com/markavenueagency/">
+          <FooterIconLink
+            aria-label="Instagram"
+            href="https://www.instagram.com/markavenueagency/"
+          >
             <InstagramIcon />
           </FooterIconLink>
-          <FooterIconLink href="https://www.linkedin.com/company/mark-avenue/">
+          <FooterIconLink
+            aria-label="LinkedIn"
+            href="https://www.linkedin.com/company/mark-avenue/"
+          >
             <LinkedInIcon />
           </FooterIconLink>
         </div>
