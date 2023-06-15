@@ -1,7 +1,14 @@
 import { PreRenderHTMLArgs, RenderBodyArgs } from 'gatsby';
 import React from 'react';
 
-export function onRenderBody({ setHeadComponents }: RenderBodyArgs) {
+export function onRenderBody({
+  setHeadComponents,
+  setHtmlAttributes,
+}: RenderBodyArgs) {
+  setHtmlAttributes({
+    lang: 'sk',
+  });
+
   setHeadComponents([
     <script
       id="cookieyes"
