@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, { forwardRef } from 'react';
 import useWindowWidth from '../../../hooks/use-window-size';
 import TabsContent from '../../ui/tabs/TabsContent';
@@ -7,6 +8,7 @@ import TabsTrigger from '../../ui/tabs/TabsTrigger';
 
 import {
   content as contentClassName,
+  contentLarge,
   list,
   listLarge,
   root,
@@ -110,7 +112,7 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
             <TabsContent
               value={key}
               key={`tabs-content-${key}`}
-              className={contentClassName}
+              className={classNames(contentClassName, contentLarge)}
             >
               {content}
             </TabsContent>
