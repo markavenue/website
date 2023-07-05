@@ -7,7 +7,7 @@ import useSwiper from './use-swiper';
 import ArrowPrev from '../../../assets/arrow-prev.svg';
 import ArrowNext from '../../../assets/arrow-next.svg';
 
-import { controlButton, next, prev, root } from './Swiper.module.css';
+import { controlButton, next, prev, root, wrapper } from './Swiper.module.css';
 
 export interface MainSwiperProps extends PropsWithChildren {
   swiper?: Swiper;
@@ -24,6 +24,7 @@ export default function MainSwiper({ swiper, children }: MainSwiperProps) {
       className={root}
       onSwiper={controlSwiper.setSwiper}
       autoplay
+      wrapperClass={classNames('swiper-wrapper', wrapper)}
     >
       <button
         type="button"

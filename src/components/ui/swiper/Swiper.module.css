@@ -32,3 +32,7 @@
   margin-bottom: var(--gap);
   cursor: pointer;
 }
+
+.wrapper {
+  align-items: center;
+}
