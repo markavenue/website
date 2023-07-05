@@ -1,3 +1,3 @@
 import 'normalize.css';
-import 'swiper/css'; // eslint-disable-line import/no-unresolved
+import 'swiper/swiper.css';
 import './src/styles/global.css';
