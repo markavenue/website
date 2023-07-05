@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import Swiper, { Thumbs } from 'swiper';
+import Swiper from 'swiper';
+import { Thumbs } from 'swiper/modules';
 import { Swiper as SwiperCore } from 'swiper/react';
 
 import { thumbs } from './Swiper.module.css';

@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
-import Swiper, { Autoplay, Thumbs } from 'swiper';
+import Swiper from 'swiper';
+import { Autoplay, Thumbs } from 'swiper/modules';
 import { Swiper as SwiperCore } from 'swiper/react';
 import classNames from 'classnames';
 import useSwiper from './use-swiper';
