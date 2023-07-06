@@ -26,6 +26,7 @@ export default function MainSwiper({ swiper, children }: MainSwiperProps) {
       wrapperClass={classNames('swiper-wrapper', wrapper)}
     >
       <button
+        aria-label="Predchádzajúca snímka"
         type="button"
         className={classNames(controlButton, prev)}
         onClick={() => controlSwiper.swiper?.slidePrev()}
@@ -34,6 +35,7 @@ export default function MainSwiper({ swiper, children }: MainSwiperProps) {
       </button>
       {children}
       <button
+        aria-label="Ďalšia snímka"
         type="button"
         className={classNames(controlButton, next)}
         onClick={() => controlSwiper.swiper?.slideNext()}
