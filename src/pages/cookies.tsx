@@ -74,43 +74,39 @@ export default function CookiePolicyPage() {
           prehliadačov.
         </p>
         <p>
-          Chrome:{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://support.google.com/accounts/answer/32050"
           >
-            https://support.google.com/accounts/answer/32050
+            Chrome
           </a>
         </p>
         <p>
-          Safari:{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://support.apple.com/en-in/guide/safari/sfri11471/mac"
           >
-            https://support.apple.com/en-in/guide/safari/sfri11471/mac
+            Safari
           </a>
         </p>
         <p>
-          Firefox:{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&amp;redirectlocale=en-US"
           >
-            https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&amp;redirectlocale=en-US
+            Firefox
           </a>
         </p>
         <p>
-          Internet Explorer:{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
             href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc"
           >
-            https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc
+            Internet Explorer
           </a>
         </p>
         <p>
