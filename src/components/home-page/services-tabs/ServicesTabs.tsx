@@ -98,7 +98,12 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
   const windowWidth = useWindowWidth() ?? 0;
 
   return (
-    <TabsRoot ref={ref} defaultValue="advertising" className={root}>
+    <TabsRoot
+      className={root}
+      defaultValue="advertising"
+      orientation="vertical"
+      ref={ref}
+    >
       {windowWidth > DESKTOP_BREAKPOINT ? (
         <>
           <TabsList className={listLarge}>
