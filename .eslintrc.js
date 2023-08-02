@@ -1,8 +1,9 @@
 // Extends the configuration shipped with Gatsby and makes it possible to use
 // the same rules no matter how ESLint is run.
 
-const { eslintConfig } = require('gatsby/dist/utils/eslint-config');
 const path = require('path');
+
+const { eslintConfig } = require('gatsby/dist/utils/eslint-config');
 const { rules } = require('gatsby/dist/utils/eslint/required');
 const rulesDirPlugin = require('eslint-plugin-rulesdir');
 
