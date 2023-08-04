@@ -6,22 +6,61 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.listLarge {
   margin: 36px 0;
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
 }
 
-.contentLarge {
+.icon {
+  display: none;
+}
+
+.icon svg {
+  display: block;
+  height: 24px;
+  margin: 0 auto;
+  width: auto;
+}
+
+.icon svg path {
+  fill: currentColor;
+}
+
+.content {
   width: 100%;
 }
 
 .content ul {
   line-height: 1.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .root {
+    flex-direction: column;
+  }
+
+  .list {
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+  }
+
+  .trigger {
+    flex: 1;
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+
+  .icon {
+    display: unset;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .content {
+    width: auto;
+  }
 }

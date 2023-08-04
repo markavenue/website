@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, { forwardRef } from 'react';
 import useWindowWidth from '../../../hooks/use-window-size';
 import TabsContent from '../../ui/tabs/TabsContent';
@@ -8,16 +7,23 @@ import TabsTrigger from '../../ui/tabs/TabsTrigger';
 
 import {
   content as contentClassName,
-  contentLarge,
+  icon as iconClassName,
+  label as labelClassName,
   list,
-  listLarge,
   root,
+  trigger,
 } from './ServicesTabs.module.css';
+
+import CameraIcon from '../../../assets/camera.svg';
+import CampaignIcon from '../../../assets/campaign.svg';
+import GroupIcon from '../../../assets/group.svg';
+import RocketLaunchIcon from '../../../assets/rocket_launch.svg';
 
 const DESKTOP_BREAKPOINT = 1025;
 
 const TABS = [
   {
+    icon: <CampaignIcon />,
     key: 'advertising',
     label: 'Reklamná kampaň',
     content: (
@@ -43,6 +49,7 @@ const TABS = [
     ),
   },
   {
+    icon: <RocketLaunchIcon />,
     key: 'brand-devel',
     label: 'Brand Development',
     content: (
@@ -65,6 +72,7 @@ const TABS = [
     ),
   },
   {
+    icon: <GroupIcon />,
     key: 'social-networks',
     label: 'Správa sociálnych sietí',
     content: (
@@ -81,6 +89,7 @@ const TABS = [
     ),
   },
   {
+    icon: <CameraIcon />,
     key: 'foto-video-production',
     label: 'Foto / video produkcia',
     content: (
@@ -101,40 +110,34 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
     <TabsRoot
       className={root}
       defaultValue="advertising"
-      orientation="vertical"
+      orientation={windowWidth < DESKTOP_BREAKPOINT ? 'horizontal' : 'vertical'}
       ref={ref}
     >
-      {windowWidth > DESKTOP_BREAKPOINT ? (
-        <>
-          <TabsList className={listLarge}>
-            {TABS.map(({ label, key }) => (
-              <TabsTrigger value={key} key={`tabs-trigger-${key}`}>
-                {label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          {TABS.map(({ content, key }) => (
-            <TabsContent
-              value={key}
-              key={`tabs-content-${key}`}
-              className={classNames(contentClassName, contentLarge)}
-            >
-              {content}
-            </TabsContent>
-          ))}
-        </>
-      ) : (
+      <>
         <TabsList className={list}>
-          {TABS.map(({ label, content, key }) => (
-            <React.Fragment key={key}>
-              <TabsTrigger value={key}>{label}</TabsTrigger>
-              <TabsContent value={key} className={contentClassName}>
-                {content}
-              </TabsContent>
-            </React.Fragment>
+          {TABS.map(({ label, key, icon }) => (
+            <TabsTrigger
+              className={trigger}
+              key={`tabs-trigger-${key}`}
+              value={key}
+            >
+              <span className={iconClassName} title={label}>
+                {icon}
+              </span>
+              <span className={labelClassName}>{label}</span>
+            </TabsTrigger>
           ))}
         </TabsList>
-      )}
+        {TABS.map(({ content, key }) => (
+          <TabsContent
+            value={key}
+            key={`tabs-content-${key}`}
+            className={contentClassName}
+          >
+            {content}
+          </TabsContent>
+        ))}
+      </>
     </TabsRoot>
   );
 });
