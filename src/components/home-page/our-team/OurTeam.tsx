@@ -4,7 +4,7 @@ import Heading from '../../text/heading/Heading';
 import Paragraph from '../../text/paragraph/Paragraph';
 import Section from '../../ui/section/Section';
 
-import { image, ourTeam, paragraph, row } from './OurTeam.module.css';
+import { cell, image, ourTeam, paragraph, row } from './OurTeam.module.css';
 
 export default React.forwardRef<HTMLDivElement>((_, ref) => (
   <Section ref={ref} variant="dark" className={ourTeam}>
@@ -16,7 +16,7 @@ export default React.forwardRef<HTMLDivElement>((_, ref) => (
       tvorcami. Nie sme ničím limitovaní.
     </Paragraph>
     <div className={row}>
-      <div>
+      <div className={cell}>
         <StaticImage
           className={image}
           src="../../../assets/andrey.png"
@@ -27,7 +27,7 @@ export default React.forwardRef<HTMLDivElement>((_, ref) => (
         </p>
         <p>Brand strategy & online specialist</p>
       </div>
-      <div>
+      <div className={cell}>
         <StaticImage
           className={image}
           src="../../../assets/jan.png"
@@ -38,7 +38,7 @@ export default React.forwardRef<HTMLDivElement>((_, ref) => (
         </p>
         <p>Head of creativity</p>
       </div>
-      <div>
+      <div className={cell}>
         <StaticImage
           className={image}
           src="../../../assets/kristina.png"

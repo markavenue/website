@@ -28,6 +28,10 @@
   margin: 0;
 }
 
+.cell {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1025px) {
   .row {
     flex-direction: row;
