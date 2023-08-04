@@ -16,5 +16,5 @@ function QuestBarPage() {
 export default QuestBarPage;
 
 export function Head() {
-  return <PageTitle>Soupculture</PageTitle>;
+  return <PageTitle>Quest Bar</PageTitle>;
 }
