@@ -6,12 +6,21 @@ import LinkToTopAnchor from '../link-to-top/LinkToTopAnchor';
 
 import { main } from './Layout.module.css';
 
-export default function Layout({ children }: PropsWithChildren) {
+interface LayoutProps {
+  contentClassName?: string;
+  header?: boolean;
+}
+
+export default function Layout({
+  children,
+  contentClassName = main,
+  header = true,
+}: PropsWithChildren<LayoutProps>) {
   return (
     <>
       <LinkToTopAnchor />
-      <Header />
-      <main className={main}>{children}</main>
+      {header && <Header />}
+      <main className={contentClassName || undefined}>{children}</main>
       <Footer />
       <LinkToTop />
     </>

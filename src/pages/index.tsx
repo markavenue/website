@@ -1,6 +1,6 @@
 import React from 'react';
+import Layout from '../components/ui/layout/Layout';
 import ApartmeaIcon from '../assets/apartmea-icon.svg';
-import Footer from '../components/ui/footer/Footer';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
 import Hero from '../components/ui/hero/Hero';
@@ -18,14 +18,10 @@ import {
   QUEST_BAR_PAGE,
   SOUPCULTURE_PAGE,
 } from '../const/routes';
-import LinkToTopAnchor from '../components/ui/link-to-top/LinkToTopAnchor';
-import LinkToTop from '../components/ui/link-to-top/LinkToTop';
 
 function IndexPage() {
   return (
-    <main>
-      <LinkToTopAnchor />
-      <LinkToTop />
+    <Layout contentClassName="" header={false}>
       <HeroBanner />
       <div id="portfolio" />
       <Section withSpacing>
@@ -92,8 +88,7 @@ function IndexPage() {
       <OurTeam />
       <Partners />
       <div id="contact" />
-      <Footer />
-    </main>
+    </Layout>
   );
 }
 
