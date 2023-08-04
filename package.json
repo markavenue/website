@@ -23,7 +23,6 @@
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-dts-css-modules": "^3.0.0",
-    "gatsby-plugin-eslint": "^4.0.4",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
@@ -52,7 +51,6 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-rulesdir": "0.2.1",
     "eslint-plugin-sonarjs": "^0.19.0",
-    "eslint-webpack-plugin": "^4.0.1",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6"
   },

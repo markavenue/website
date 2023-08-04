@@ -24,12 +24,6 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: 'gatsby-plugin-eslint',
-      options: {
-        extensions: ['js', 'jsx', 'ts', 'tsx'],
-      },
-    },
-    {
       resolve: 'gatsby-omni-font-loader',
       options: {
         enableListener: true,
