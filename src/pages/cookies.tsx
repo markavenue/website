@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
 import PageTitle from '../components/page-title/PageTitle';
+
+/* Render the element only on the client side to prevent CookieYes script from
+populating it while React tries to hydrate it, which would result in hydration
+errors. See:
+https://react.dev/reference/react-dom/client/hydrateRoot#handling-different-client-and-server-content
+*/
+function AuditTable() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return isClient && <div className="cky-audit-table-element" />;
+}
 
 export default function CookiePolicyPage() {
   return (
@@ -51,7 +66,7 @@ export default function CookiePolicyPage() {
       </div>
       &nbsp;
       <h2>Typy súborov cookie, ktoré používame</h2>
-      <div className="cky-audit-table-element" />
+      <AuditTable />
       &nbsp;
       <h2>Správa predvolieb súborov cookie</h2>
       <button className="cky-banner-element" type="button">
