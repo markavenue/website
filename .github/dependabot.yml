@@ -15,6 +15,9 @@ updates:
           - version-update:semver-minor
           - version-update:semver-patch
     groups:
+      fontsource:
+        patterns:
+          - '@fontsource/*'
       gatsby:
         patterns:
           - gatsby
