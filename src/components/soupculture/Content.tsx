@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import classNames from 'classnames';
+import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import ReactPlayer from 'react-player/youtube';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import { SwiperSlide } from 'swiper/react';
 import Article from '../text/article/Article';
 import Container from '../ui/layout/Container';
@@ -8,7 +9,7 @@ import Description from '../text/article/Description';
 import H1 from '../text/article/H1';
 import Paragraph from '../text/article/Paragraph';
 
-import { video } from './Common.module.css';
+import { video, videoInnerWrapper } from './Common.module.css';
 import MainSwiper from '../ui/swiper/MainSwiper';
 import useSwiper from '../ui/swiper/use-swiper';
 import ThumbSwiper from '../ui/swiper/ThumbSwiper';
@@ -67,32 +68,6 @@ const THUMBS = [
   />,
 ];
 
-// ReactPlayer behaves differently in browser.
-function VideoPlayer() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  return (
-    isClient && (
-      <ReactPlayer
-        config={{
-          playerVars: {
-            autoplay: 1,
-          },
-        }}
-        controls
-        light
-        url="https://www.youtube.com/embed/EE4NJbuIHX0"
-        width="100%"
-        height="100%"
-      />
-    )
-  );
-}
-
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
   return (
@@ -133,7 +108,13 @@ export default function Content() {
       </Container>
       <Container rtl>
         <div className={video}>
-          <VideoPlayer />
+          <LiteYouTubeEmbed
+            cookie
+            id="EE4NJbuIHX0"
+            poster="maxresdefault"
+            title="Soupculture_Promo"
+            wrapperClass={classNames('yt-lite', videoInnerWrapper)}
+          />
         </div>
         <H1>Promo video</H1>
       </Container>

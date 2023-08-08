@@ -4,6 +4,10 @@
   border: none;
 }
 
+.videoInnerWrapper {
+  height: 100%;
+}
+
 @media screen and (min-width: 1025px) {
   .video {
     height: 400px;
