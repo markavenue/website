@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
+import ReactPlayer from 'react-player/youtube';
 import { SwiperSlide } from 'swiper/react';
 import Article from '../text/article/Article';
 import Container from '../ui/layout/Container';
@@ -66,6 +67,32 @@ const THUMBS = [
   />,
 ];
 
+// ReactPlayer behaves differently in browser.
+function VideoPlayer() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return (
+    isClient && (
+      <ReactPlayer
+        config={{
+          playerVars: {
+            autoplay: 1,
+          },
+        }}
+        controls
+        light
+        url="https://www.youtube.com/embed/EE4NJbuIHX0"
+        width="100%"
+        height="100%"
+      />
+    )
+  );
+}
+
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
   return (
@@ -105,17 +132,9 @@ export default function Content() {
         </Article>
       </Container>
       <Container rtl>
-        <iframe
-          className={video}
-          width="1100"
-          height="500"
-          src="https://www.youtube.com/embed/EE4NJbuIHX0"
-          title="YouTube video player"
-          frameBorder="0"
-          // eslint-disable-next-line max-len
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        />
+        <div className={video}>
+          <VideoPlayer />
+        </div>
         <H1>Promo video</H1>
       </Container>
     </section>
