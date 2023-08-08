@@ -25,6 +25,7 @@
     "gatsby": "^5.11.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-dts-css-modules": "^3.0.0",
+    "gatsby-plugin-force-file-loader": "^5.0.1",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",

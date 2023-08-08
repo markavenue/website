@@ -50,6 +50,17 @@ const config: GatsbyConfig = {
         },
       },
     },
+    {
+      resolve: 'gatsby-plugin-force-file-loader',
+      options: {
+        rules: [
+          /* Font embedding increases the size of CSS and therefore each page
+          significantly. Modern browsers don't even load fonts that aren't used.
+          */
+          'fonts',
+        ],
+      },
+    },
   ],
 };
 
