@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import AnchorLink from '../achor-link/AnchorLink';
 import Logo from '../logo/Logo';
 
 import {

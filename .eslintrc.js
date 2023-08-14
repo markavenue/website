@@ -63,12 +63,8 @@ module.exports = {
       },
       rules: {
         ...commonRules,
-        'react/jsx-props-no-spreading': [
-          'error',
-          {
-            html: 'ignore',
-          },
-        ],
+        // Prop correctness is checked with TypeScript.
+        'react/jsx-props-no-spreading': 'off',
         'react/require-default-props': 'off',
       },
     },
