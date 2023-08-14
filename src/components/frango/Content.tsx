@@ -12,6 +12,13 @@ import Row from '../ui/layout/Row';
 
 import { frangoIcon, grid } from './Common.module.css';
 
+export const DESCRIPTION = `\
+Frango je slovenská sieť reštaurácií rýchleho občerstvenia, ktorá sa \
+špecializuje na chutné a šťavnaté jedlá z kuracieho mäska. Vďaka spolupráci s \
+nami získali úplne novú, originálnu vizuálnu identitu, ktorou táto sieť púta \
+pozornosť ľudí vo foodcourte na nivách. \
+`;
+
 export default function Content() {
   return (
     <>
@@ -19,12 +26,7 @@ export default function Content() {
         <StaticImage src="../../assets/frango-1.jpeg" alt="" />
         <Article>
           <H1>O projekte</H1>
-          <Paragraph>
-            Frango je slovenská sieť reštaurácií rýchleho občerstvenia, ktorá sa
-            špecializuje na chutné a šťavnaté jedlá z kuracieho mäska. Vďaka
-            spolupráci s nami získali úplne novú, originálnu vizuálnu identitu,
-            ktorou táto sieť púta pozornosť ľudí vo foodcourte na nivách.
-          </Paragraph>
+          <Paragraph>{DESCRIPTION}</Paragraph>
           <dl>
             <Description title="Klient:">Frango</Description>
             <Description title="Rok:">2022</Description>

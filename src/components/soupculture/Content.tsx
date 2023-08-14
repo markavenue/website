@@ -66,6 +66,16 @@ const THUMBS = [
   />,
 ];
 
+export const DESCRIPTION = `\
+Koncept polievky v poháriku alebo bezodpadový street food Soupculture prišiel \
+do Bratislavy pred dvoma rokmi. Pri ich začiatkoch sme stáli aj my. Vytvorili \
+sme úspešnú reklamnú kampaň, vďaka ktorej sa značka Soupculture dostala medzi \
+relevantnú cieľovú skupinu. Taktiež sme zapojili do kampane známych \
+influencerov, vytvorili sme niekoľko súťaží a navrhli dizajn vernostným \
+kartičkám. Dnes sa spolu so Soupculture tešíme veľkej obľube tejto novej \
+polievkovej kultúry.\
+`;
+
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
   return (
@@ -85,16 +95,7 @@ export default function Content() {
             ))}
           </ThumbSwiper>
           <H1>O projekte</H1>
-          <Paragraph>
-            Koncept polievky v poháriku alebo bezodpadový street food
-            Soupculture prišiel do Bratislavy pred dvoma rokmi. Pri ich
-            začiatkoch sme stáli aj my. Vytvorili sme úspešnú reklamnú kampaň,
-            vďaka ktorej sa značka Soupculture dostala medzi relevantnú cieľovú
-            skupinu. Taktiež sme zapojili do kampane známych influencerov,
-            vytvorili sme niekoľko súťaží a navrhli dizajn vernostným kartičkám.
-            Dnes sa spolu so Soupculture tešíme veľkej obľube tejto novej
-            polievkovej kultúry.
-          </Paragraph>
+          <Paragraph>{DESCRIPTION}</Paragraph>
           <dl>
             <Description title="Klient:">Soupculture</Description>
             <Description title="Rok:">2021</Description>

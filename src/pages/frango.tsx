@@ -1,13 +1,15 @@
 import React from 'react';
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
-import Content from '../components/frango/Content';
-import PageTitle from '../components/page-title/PageTitle';
+import Content, { DESCRIPTION } from '../components/frango/Content';
+import PageHead from '../components/page-head/PageHead';
+
+const TITLE = 'Frango';
 
 function FrangoPage() {
   return (
     <Layout>
-      <Heading variant="normal">Frango</Heading>
+      <Heading variant="normal">{TITLE}</Heading>
       <Content />
     </Layout>
   );
@@ -16,5 +18,5 @@ function FrangoPage() {
 export default FrangoPage;
 
 export function Head() {
-  return <PageTitle>Frango</PageTitle>;
+  return <PageHead description={DESCRIPTION} title={TITLE} />;
 }

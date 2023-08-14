@@ -60,6 +60,12 @@ const THUMBS = [
   />,
 ];
 
+export const DESCRIPTION = `\
+Islamská nadácia na Slovensku už viac ako 23 rokov buduje mosty porozumenia – \
+jej členovia prepájajú a zbližujú cudzinecké a moslimské minority so \
+slovenskou verejnosťou cez otvorený dialóg.\
+`;
+
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
 
@@ -86,11 +92,7 @@ export default function Content() {
               reklamná kampaň, vizuálna identita
             </Description>
           </dl>
-          <Paragraph>
-            Islamská nadácia na Slovensku už viac ako 23 rokov buduje mosty
-            porozumenia – jej členovia prepájajú a zbližujú cudzinecké a
-            moslimské minority so slovenskou verejnosťou cez otvorený dialóg.
-          </Paragraph>
+          <Paragraph>{DESCRIPTION}</Paragraph>
           <Paragraph>
             Oslovili nás s požiadavkou na tvorbu vizuálnej identity a
             celoslovenskej kampane Hate-Free Zone. Cieľom kampane je

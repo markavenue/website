@@ -4,9 +4,11 @@ import ApartmeaIcon from '../assets/apartmea-icon.svg';
 import FrangoIcon from '../assets/frango-icon.svg';
 import HateFreeZoneIcon from '../assets/hate-free-zone-icon.svg';
 import Hero from '../components/ui/hero/Hero';
-import HeroBanner from '../components/home-page/hero-banner/HeroBanner';
+import HeroBanner, {
+  SUBTITLE,
+} from '../components/home-page/hero-banner/HeroBanner';
 import OurTeam from '../components/home-page/our-team/OurTeam';
-import PageTitle from '../components/page-title/PageTitle';
+import PageHead from '../components/page-head/PageHead';
 import Partners from '../components/home-page/partners/Partners';
 import QuestBarIcon from '../assets/quest-bar-icon.svg';
 import Section from '../components/ui/section/Section';
@@ -95,5 +97,5 @@ function IndexPage() {
 export default IndexPage;
 
 export function Head() {
-  return <PageTitle />;
+  return <PageHead description={SUBTITLE} />;
 }

@@ -1,13 +1,15 @@
 import React from 'react';
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
-import Content from '../components/soupculture/Content';
-import PageTitle from '../components/page-title/PageTitle';
+import Content, { DESCRIPTION } from '../components/soupculture/Content';
+import PageHead from '../components/page-head/PageHead';
+
+const TITLE = 'Soupculture';
 
 function SoupculturePage() {
   return (
     <Layout>
-      <Heading variant="normal">Soupculture</Heading>
+      <Heading variant="normal">{TITLE}</Heading>
       <Content />
     </Layout>
   );
@@ -16,5 +18,5 @@ function SoupculturePage() {
 export default SoupculturePage;
 
 export function Head() {
-  return <PageTitle>Soupculture</PageTitle>;
+  return <PageHead description={DESCRIPTION} title={TITLE} />;
 }

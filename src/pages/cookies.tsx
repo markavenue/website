@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
-import PageTitle from '../components/page-title/PageTitle';
+import PageHead from '../components/page-head/PageHead';
 
 /* Render the element only on the client side to prevent CookieYes script from
 populating it while React tries to hydrate it, which would result in hydration
@@ -19,10 +19,19 @@ function AuditTable() {
   return isClient && <div className="cky-audit-table-element" />;
 }
 
+const TITLE = 'Zásady používania súborov cookies';
+
+const DESCRIPTION = `
+Tieto zásady používania súborov cookie vysvetľujú, čo sú súbory cookie a ako \
+ich používame, aké typy súborov cookie používame, t. j. aké informácie \
+zhromažďujeme pomocou súborov cookie a ako sa tieto informácie používajú, a \
+ako spravovať nastavenia súborov cookie.\
+`;
+
 export default function CookiePolicyPage() {
   return (
     <Layout>
-      <Heading variant="normal">Zásady používania súborov cookies</Heading>
+      <Heading variant="normal">{TITLE}</Heading>
       <p>
         Dátum platnosti: 12.06.2023 <br />
         Naposledy aktualizované: 11.06.2023
@@ -30,12 +39,7 @@ export default function CookiePolicyPage() {
       &nbsp;
       <h2>Čo sú súbory cookie?</h2>
       <div>
-        <p>
-          Tieto zásady používania súborov cookie vysvetľujú, čo sú súbory cookie
-          a ako ich používame, aké typy súborov cookie používame, t. j. aké
-          informácie zhromažďujeme pomocou súborov cookie a ako sa tieto
-          informácie používajú, a ako spravovať nastavenia súborov cookie.
-        </p>{' '}
+        <p>{DESCRIPTION}</p>{' '}
         <p>
           {' '}
           Súbory cookie sú malé textové súbory, ktoré sa používajú na ukladanie
@@ -146,5 +150,5 @@ export default function CookiePolicyPage() {
 }
 
 export function Head() {
-  return <PageTitle>Zásady používania súborov cookies</PageTitle>;
+  return <PageHead description={DESCRIPTION} title={TITLE} />;
 }

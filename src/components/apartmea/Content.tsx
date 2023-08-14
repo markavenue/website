@@ -256,6 +256,12 @@ const THUMBS = [
   />,
 ];
 
+export const DESCRIPTION = `\
+Apartmea je spoločnosť, ktorá zjednodušuje zákaznícku cestu k rezervácii \
+apartmánov. Dostali sme za úlohu vytvoriť funkčný brand pre rakúsky trh. Okrem \
+vizuálnej identity sme sa zaoberali aj tvorbou namingu.\
+`;
+
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
 
@@ -275,12 +281,7 @@ export default function Content() {
           ))}
         </ThumbSwiper>
         <H1>O projekte</H1>
-        <Paragraph>
-          Apartmea je spoločnosť, ktorá zjednodušuje zákaznícku cestu k
-          rezervácii apartmánov. Dostali sme za úlohu vytvoriť funkčný brand pre
-          rakúsky trh. Okrem vizuálnej identity sme sa zaoberali aj tvorbou
-          namingu.
-        </Paragraph>
+        <Paragraph>{DESCRIPTION}</Paragraph>
         <dl>
           <Description title="Klient:">Apartmea</Description>
           <Description title="Rok:">2021</Description>

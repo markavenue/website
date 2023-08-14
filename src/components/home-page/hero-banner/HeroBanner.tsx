@@ -18,6 +18,11 @@ import {
   wrapper,
 } from './Common.module.css';
 
+export const SUBTITLE = `\
+Sme kreatívna marketingová agentúra, ktorej cieľom je prepájať mosty medzi \
+zákazníkmi a značkami v digitálnom prostredí. Tvoríme reklamy a vyvíjame brand.\
+`;
+
 export default function HeroBanner() {
   return (
     <div className={container}>
@@ -36,11 +41,7 @@ export default function HeroBanner() {
             <br />
             <span className={accent}>tomorrow</span>
           </h1>
-          <span className={subtitle}>
-            Sme kreatívna marketingová agentúra, ktorej cieľom je prepájať mosty
-            medzi zákazníkmi a značkami v digitálnom prostredí. Tvoríme reklamy
-            a vyvíjame brand.
-          </span>
+          <span className={subtitle}>{SUBTITLE}</span>
           <div className={arrow}>
             <AnchorLink
               gatsbyLinkProps={{

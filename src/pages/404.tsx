@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import PageTitle from '../components/page-title/PageTitle';
+import PageHead from '../components/page-head/PageHead';
 
 const pageStyles = {
   color: '#232129',
@@ -49,5 +49,5 @@ function NotFoundPage() {
 export default NotFoundPage;
 
 export function Head() {
-  return <PageTitle>Not found</PageTitle>;
+  return <PageHead description="" title="Not found" />;
 }

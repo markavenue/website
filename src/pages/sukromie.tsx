@@ -3,16 +3,18 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
-import PageTitle from '../components/page-title/PageTitle';
+import PageHead from '../components/page-head/PageHead';
 import EmailLink from '../components/ui/link/EmailLink';
 import { CONTACT_EMAIL_ADDRESS, CONTACT_PHONE_NUMBER } from '../const/contact';
 import PhoneLink from '../components/ui/link/PhoneLink';
 import { COOKIE_POLICY_PAGE } from '../const/routes';
 
+const TITLE = 'Zásady ochrany osobných údajov';
+
 export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <Heading variant="normal">Zásady ochrany osobných údajov</Heading>
+      <Heading variant="normal">{TITLE}</Heading>
       <p>
         Dátum platnosti: 12.06.2023 <br />
         Naposledy aktualizované: 11.06.2023
@@ -152,6 +154,12 @@ export default function PrivacyPolicyPage() {
   );
 }
 
+const DESCRIPTION = `\
+Tieto zásady ochrany osobných údajov popisujú zásady Mark Avenue pri zbere, \
+používaní a zverejňovaní vašich informácií, ktoré zhromažďujeme pri používaní \
+našej webovej stránky.\
+`;
+
 export function Head() {
-  return <PageTitle>Zásady ochrany osobných údajov</PageTitle>;
+  return <PageHead description={DESCRIPTION} title={TITLE} />;
 }

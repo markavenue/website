@@ -1,13 +1,15 @@
 import React from 'react';
 import Heading from '../components/text/heading/Heading';
 import Layout from '../components/ui/layout/Layout';
-import Content from '../components/hate-free-zone/Content';
-import PageTitle from '../components/page-title/PageTitle';
+import Content, { DESCRIPTION } from '../components/hate-free-zone/Content';
+import PageHead from '../components/page-head/PageHead';
+
+const TITLE = 'Hate-Free Zone';
 
 function HateFreeZonePage() {
   return (
     <Layout>
-      <Heading variant="normal">Hate-Free Zone</Heading>
+      <Heading variant="normal">{TITLE}</Heading>
       <Content />
     </Layout>
   );
@@ -16,5 +18,5 @@ function HateFreeZonePage() {
 export default HateFreeZonePage;
 
 export function Head() {
-  return <PageTitle>Hate-Free Zone</PageTitle>;
+  return <PageHead description={DESCRIPTION} title={TITLE} />;
 }

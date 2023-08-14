@@ -168,6 +168,12 @@ const THUMBS = [
   />,
 ];
 
+export const DESCRIPTION = `\
+Vytvára sa komunita milovníkov anime, hráčov a geekov. Od fanúšikov pre \
+fanúšikov. Quest bar je jedinečný anime-herný bar v trnave, ktorý si zaslúžil \
+nový brand.\
+`;
+
 export default function Content() {
   const { swiper, setSwiper } = useSwiper();
   return (
@@ -186,11 +192,7 @@ export default function Content() {
           ))}
         </ThumbSwiper>
         <H1>O projekte</H1>
-        <Paragraph>
-          Vytvára sa komunita milovníkov anime, hráčov a geekov. Od fanúšikov
-          pre fanúšikov. Quest bar je jedinečný anime-herný bar v trnave, ktorý
-          si zaslúžil nový brand.
-        </Paragraph>
+        <Paragraph>{DESCRIPTION}</Paragraph>
         <dl>
           <Description title="Klient:">Quest Bar</Description>
           <Description title="Rok:">2021</Description>
