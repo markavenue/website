@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import AnchorLink from '../../ui/achor-link/AnchorLink';
 import ArrowDownIcon from '../../../assets/arrow-down-icon.svg';
 import Header from '../../ui/header/Header';
 import MarkAvenueVideo from '../../../assets/mark-avenue-video.mp4';
