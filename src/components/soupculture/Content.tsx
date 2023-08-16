@@ -13,7 +13,7 @@ import useSwiper from '../ui/swiper/use-swiper';
 import ThumbSwiper from '../ui/swiper/ThumbSwiper';
 
 const IMAGES = [
-  <StaticImage src="../../assets/soupculture-1.png" alt="" />,
+  <StaticImage src="../../assets/soupculture-1.png" alt="" loading="eager" />,
   <StaticImage src="../../assets/soupculture-2.png" alt="" />,
   <StaticImage src="../../assets/soupculture-3.png" alt="" />,
   <StaticImage src="../../assets/soupculture-4.png" alt="" />,

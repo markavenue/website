@@ -15,7 +15,7 @@ import Video from '../ui/video/Video';
 import { grid, video } from './Common.module.css';
 
 const IMAGES = [
-  <StaticImage src="../../assets/hate-free-1.png" alt="" />,
+  <StaticImage src="../../assets/hate-free-1.png" alt="" loading="eager" />,
   <StaticImage src="../../assets/hate-free-2.png" alt="" />,
   <StaticImage src="../../assets/hate-free-3.png" alt="" />,
   <StaticImage src="../../assets/hate-free-4.png" alt="" />,

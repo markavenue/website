@@ -11,7 +11,7 @@ import ThumbSwiper from '../ui/swiper/ThumbSwiper';
 import useSwiper from '../ui/swiper/use-swiper';
 
 const IMAGES = [
-  <StaticImage src="../../assets/quest-bar-1.jpeg" alt="" />,
+  <StaticImage src="../../assets/quest-bar-1.jpeg" alt="" loading="eager" />,
   <StaticImage src="../../assets/quest-bar-2.jpeg" alt="" />,
   <StaticImage src="../../assets/quest-bar-3.jpeg" alt="" />,
   <StaticImage src="../../assets/quest-bar-4.jpeg" alt="" />,

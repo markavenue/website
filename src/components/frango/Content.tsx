@@ -23,7 +23,7 @@ export default function Content() {
   return (
     <>
       <Container>
-        <StaticImage src="../../assets/frango-1.jpeg" alt="" />
+        <StaticImage src="../../assets/frango-1.jpeg" alt="" loading="eager" />
         <Article>
           <H1>O projekte</H1>
           <Paragraph>{DESCRIPTION}</Paragraph>
