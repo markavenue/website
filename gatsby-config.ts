@@ -27,11 +27,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-dts-css-modules',
     {
       resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
     },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
