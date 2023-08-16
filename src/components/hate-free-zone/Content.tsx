@@ -5,7 +5,9 @@ import Article from '../text/article/Article';
 import Container from '../ui/layout/Container';
 import Description from '../text/article/Description';
 import HateFreeVideo1 from '../../assets/hate-free-video-1.mp4';
+import HateFreeVideo1Poster from '../../assets/hate-free-video-1-poster.webp';
 import HateFreeVideo2 from '../../assets/hate-free-video-2.mp4';
+import HateFreeVideo2Poster from '../../assets/hate-free-video-2-poster.webp';
 import MainSwiper from '../ui/swiper/MainSwiper';
 import Paragraph from '../text/article/Paragraph';
 import ThumbSwiper from '../ui/swiper/ThumbSwiper';
@@ -101,8 +103,18 @@ export default function Content() {
         </Article>
       </Container>
       <div className={grid}>
-        <Video className={video} width={400} src={HateFreeVideo1} />
-        <Video className={video} width={400} src={HateFreeVideo2} />
+        <Video
+          className={video}
+          poster={HateFreeVideo1Poster}
+          src={HateFreeVideo1}
+          width={400}
+        />
+        <Video
+          className={video}
+          poster={HateFreeVideo2Poster}
+          src={HateFreeVideo2}
+          width={400}
+        />
         <Article>
           <Paragraph>
             Kampaň zobrazuje to, že aj moslimovia chcú byť súčasťou spoločenskej
