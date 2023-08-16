@@ -7,10 +7,15 @@ import { content } from './Tabs.module.css';
 export default function TabsContent({
   className,
   children,
+  forceMount,
   value,
-}: Pick<TabsContentProps, 'value' | 'children' | 'className'>) {
+}: Pick<TabsContentProps, 'value' | 'children' | 'className' | 'forceMount'>) {
   return (
-    <Content value={value} className={classNames(className, content)}>
+    <Content
+      className={classNames(className, content)}
+      forceMount={forceMount}
+      value={value}
+    >
       {children}
     </Content>
   );

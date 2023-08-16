@@ -7,6 +7,7 @@ import TabsTrigger from '../../ui/tabs/TabsTrigger';
 
 import {
   content as contentClassName,
+  contentWrapper,
   icon as iconClassName,
   label as labelClassName,
   list,
@@ -128,15 +129,18 @@ export default forwardRef<HTMLDivElement>((_, ref) => {
             </TabsTrigger>
           ))}
         </TabsList>
-        {TABS.map(({ content, key }) => (
-          <TabsContent
-            value={key}
-            key={`tabs-content-${key}`}
-            className={contentClassName}
-          >
-            {content}
-          </TabsContent>
-        ))}
+        <div className={contentWrapper}>
+          {TABS.map(({ content, key }) => (
+            <TabsContent
+              value={key}
+              key={`tabs-content-${key}`}
+              forceMount
+              className={contentClassName}
+            >
+              {content}
+            </TabsContent>
+          ))}
+        </div>
       </>
     </TabsRoot>
   );

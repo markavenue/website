@@ -27,8 +27,17 @@
   fill: currentColor;
 }
 
+.contentWrapper {
+  display: grid;
+}
+
 .content {
-  width: 100%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.content[data-state='inactive'] {
+  visibility: hidden;
 }
 
 .content ul {
@@ -58,9 +67,5 @@
 
   .label {
     display: none;
-  }
-
-  .content {
-    width: auto;
   }
 }
